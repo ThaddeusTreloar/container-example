@@ -1,0 +1,48 @@
+# Linux
+*~
+
+# Cargo
+/target/
+Cargo.lock
+
+# Rust
+**/*.rs.bk
+**/*.swp
+**/*.swo
+**/*.swx
+**/*.swpx
+**/*.swpxx
+**/*.swpxxx
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyz
+*.pyw
+*.pyi
+*.pyz
+*.pyw
+*.pyi
+*.egg-info/
+dist/
+build/
+*.egg
+*.egg-info
+*.pyc
+*.pyo
+*.pyd
+*.pyz
+*.pyw
+*.pyi
+*.pyz
+*.pyw
+*.pyi
+
+# Docker
+.dockerignore
+.docker/
+!Dockerfile
+!docker-compose.yml
+!docker-compose.yaml
