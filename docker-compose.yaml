@@ -1,0 +1,84 @@
+version: '3'
+services:
+  init:
+    image: init:latest
+    # Add any additional configuration for the init container here
+
+    volumes:
+      - shared-volume:/opt/thermite/var
+
+    networks:
+      - service-net
+
+  zookeeper:
+    image: wurstmeister/zookeeper
+    container_name: zookeeper
+    ports:
+      - "2181:2181"
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
+
+    depends_on:
+      - init
+
+    networks:
+      - service-net
+
+  kafka:
+    image: wurstmeister/kafka
+    container_name: kafka
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_ADVERTISED_LISTENERS: INSIDE://kafka:9092,OUTSIDE://localhost:9093
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT
+      KAFKA_LISTENERS: INSIDE://0.0.0.0:9092,OUTSIDE://0.0.0.0:9093
+      KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_CREATE_TOPICS: "baeldung:1:1"
+
+    depends_on:
+      - init
+
+    networks:
+      - service-net
+
+  app:
+    image: fake-logger:latest
+    volumes:
+      - shared-volume:/opt/thermite/var
+    environment:
+      - LOG_PATH=/opt/thermite/var/log/app.log
+    # Add your configuration for the main service here
+
+    depends_on:
+      - init
+
+    networks:
+      - service-net
+
+  logging_processor:
+    image: logging_processor:latest
+    volumes:
+      - shared-volume:/opt/thermite/var
+    environment:
+      - LOG_PATH=/opt/thermite/var/log/*.log
+      - KAFKA_TOPIC=log_sink
+      - KAFKA_BOOTSTRAP_SERVERS=kafka:9092
+    # Add your configuration for the sidecar service here
+
+    depends_on:
+      - init
+      - app
+
+    networks:
+      - service-net
+
+volumes:
+  shared-volume:
+
+networks:
+  service-net:
+    driver: bridge
