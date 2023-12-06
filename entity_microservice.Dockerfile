@@ -9,19 +9,22 @@ WORKDIR /build
 COPY Cargo.toml Cargo.lock ./
 
 # Copy the source code to the container
-COPY logging_processor ./logging_processor
+COPY entity_microservice ./entity_microservice
+COPY shared ./shared
 
 # Build the application
-RUN cargo build --release --bin logging_processor
+RUN cargo build --release --bin entity_microservice
 
 # Stage 2: Create the output container
 FROM rust:latest
 
 # Set the working directory inside the container
-WORKDIR /opt/thermite/logging_processor
+WORKDIR /opt/thermite/entity_microservice
 
 # Copy the binary from the builder stage to the output container
-COPY --from=builder /build/target/release/logging_processor /opt/thermite/logging_processor/app
+COPY --from=builder /build/target/release/entity_microservice /opt/thermite/entity_microservice/app
+COPY ./bootstrap.sh /opt/thermite/entity_microservice/bootstrap.sh
+RUN chmod 755 /opt/thermite/entity_microservice/bootstrap.sh
 
 # Set the entrypoint command for the container
-CMD ["sh", "-c", " ls . && tail -n+1 -F $LOG_PATH | ./app"]
+CMD ["./bootstrap.sh", "./app"]

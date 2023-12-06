@@ -7,9 +7,32 @@ edition = "2021"
 
 [dependencies]
 anyhow = "1.0.75"
+axum = { version = "0.7.2", features = ["tracing", "macros"] }
+rand = "0.8.5"
 rdkafka = { version = "0.36.0", features = ["tracing"] }
+reqwest = { version = "0.11.22", features = ["json"] }
+serde = { version = "1.0.193", features = ["derive"] }
+serde_json = "1.0.108"
 tokio = { version = "1.34.0", features = ["full", "io-util", "tracing"] }
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["json", "parking_lot"] }
 
 [[bin]]
-name = "logging-processor"
-path = "logging-processor/main.rs"
+name = "logging_processor"
+path = "logging_processor/main.rs"
+
+[[bin]]
+name = "combo_service"
+path = "combo_service/main.rs"
+
+[[bin]]
+name = "property_microservice"
+path = "property_microservice/main.rs"
+
+[[bin]]
+name = "entity_microservice"
+path = "entity_microservice/main.rs"
+
+[lib]
+name = "shared"
+path = "shared/lib.rs"

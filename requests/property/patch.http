@@ -1,0 +1,9 @@
+
+
+PATCH http://127.0.0.1:8080/entry/some_entry
+Content-Type: application/json
+
+{
+  "property": "Some Property",
+  "value": "low"
+}

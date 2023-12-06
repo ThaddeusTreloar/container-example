@@ -1,0 +1,562 @@
+[
+    {
+        "timestamp": "2023-12-06T05:41:42.792013Z",
+        "level": "INFO",
+        "fields": {
+            "message": "req: payload=Entry { property: \"asd\", value: \"def\" }"
+        },
+        "target": "microservice::biz_router",
+        "filename": "microservice/biz_router.rs",
+        "line_number": 53,
+        "span": {
+            "id": "03030A0A0D0E",
+            "name": "post_entry"
+        },
+        "spans": [
+            {
+                "id": "03030A0A0D0E",
+                "name": "post_entry"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T05:42:17.906722Z",
+        "level": "INFO",
+        "fields": {
+            "message": "req: name=test"
+        },
+        "target": "microservice::biz_router",
+        "filename": "microservice/biz_router.rs",
+        "line_number": 90,
+        "span": {
+            "id": "0D0B0A010B09",
+            "name": "delete_entry"
+        },
+        "spans": [
+            {
+                "id": "0D0B0A010B09",
+                "name": "delete_entry"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T05:42:22.539645Z",
+        "level": "INFO",
+        "fields": {
+            "message": "req: payload=Entry { property: \"asd\", value: \"def\" }"
+        },
+        "target": "microservice::biz_router",
+        "filename": "microservice/biz_router.rs",
+        "line_number": 53,
+        "span": {
+            "id": "020506070705",
+            "name": "post_entry"
+        },
+        "spans": [
+            {
+                "id": "020506070705",
+                "name": "post_entry"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T05:42:32.365125Z",
+        "level": "INFO",
+        "fields": {
+            "message": "req: name=test"
+        },
+        "target": "microservice::biz_router",
+        "filename": "microservice/biz_router.rs",
+        "line_number": 31,
+        "span": {
+            "id": "020A030F0300",
+            "name": "get_entry"
+        },
+        "spans": [
+            {
+                "id": "020A030F0300",
+                "name": "get_entry"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T05:42:32.365217Z",
+        "level": "INFO",
+        "fields": {
+            "message": "resp: value=property=asd, value=def"
+        },
+        "target": "microservice::biz_router",
+        "filename": "microservice/biz_router.rs",
+        "line_number": 35,
+        "span": {
+            "id": "020A030F0300",
+            "name": "get_entry"
+        },
+        "spans": [
+            {
+                "id": "020A030F0300",
+                "name": "get_entry"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T05:42:39.845759Z",
+        "level": "INFO",
+        "fields": {
+            "message": "req: name=test"
+        },
+        "target": "microservice::biz_router",
+        "filename": "microservice/biz_router.rs",
+        "line_number": 90,
+        "span": {
+            "id": "0E070C0E060F",
+            "name": "delete_entry"
+        },
+        "spans": [
+            {
+                "id": "0E070C0E060F",
+                "name": "delete_entry"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T05:42:42.476669Z",
+        "level": "INFO",
+        "fields": {
+            "message": "req: name=test"
+        },
+        "target": "microservice::biz_router",
+        "filename": "microservice/biz_router.rs",
+        "line_number": 31,
+        "span": {
+            "id": "00050B0B0A02",
+            "name": "get_entry"
+        },
+        "spans": [
+            {
+                "id": "00050B0B0A02",
+                "name": "get_entry"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T05:42:42.476750Z",
+        "level": "ERROR",
+        "fields": {
+            "message": "resp: status=404 Not Found"
+        },
+        "target": "microservice::biz_router",
+        "filename": "microservice/biz_router.rs",
+        "line_number": 39,
+        "span": {
+            "id": "00050B0B0A02",
+            "name": "get_entry"
+        },
+        "spans": [
+            {
+                "id": "00050B0B0A02",
+                "name": "get_entry"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T05:53:06.781725Z",
+        "level": "INFO",
+        "fields": {
+            "message": "req: name=some_item"
+        },
+        "target": "microservice::biz_router",
+        "filename": "microservice/biz_router.rs",
+        "line_number": 31,
+        "span": {
+            "id": "0C02000D0E06",
+            "name": "get_entry"
+        },
+        "spans": [
+            {
+                "id": "0C02000D0E06",
+                "name": "get_entry"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T05:53:06.781843Z",
+        "level": "ERROR",
+        "fields": {
+            "message": "resp: status=404 Not Found"
+        },
+        "target": "microservice::biz_router",
+        "filename": "microservice/biz_router.rs",
+        "line_number": 39,
+        "span": {
+            "id": "0C02000D0E06",
+            "name": "get_entry"
+        },
+        "spans": [
+            {
+                "id": "0C02000D0E06",
+                "name": "get_entry"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T05:54:21.906400Z",
+        "level": "INFO",
+        "fields": {
+            "message": "req: payload=Entry { property: \"Some Property\", value: \"high\" }"
+        },
+        "target": "microservice::biz_router",
+        "filename": "microservice/biz_router.rs",
+        "line_number": 53,
+        "span": {
+            "id": "010C09020F07",
+            "name": "post_entry"
+        },
+        "spans": [
+            {
+                "id": "010C09020F07",
+                "name": "post_entry"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T05:54:24.133255Z",
+        "level": "INFO",
+        "fields": {
+            "message": "req: payload=Entry { property: \"Some Property\", value: \"high\" }"
+        },
+        "target": "microservice::biz_router",
+        "filename": "microservice/biz_router.rs",
+        "line_number": 53,
+        "span": {
+            "id": "0B0C0A0F0405",
+            "name": "post_entry"
+        },
+        "spans": [
+            {
+                "id": "0B0C0A0F0405",
+                "name": "post_entry"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T05:54:45.610279Z",
+        "level": "INFO",
+        "fields": {
+            "message": "req: payload=PartialEntry { property: Some(\"Some Property\"), value: Some(\"low\") }"
+        },
+        "target": "microservice::biz_router",
+        "filename": "microservice/biz_router.rs",
+        "line_number": 68,
+        "span": {
+            "id": "0F0102090306",
+            "name": "patch_entry"
+        },
+        "spans": [
+            {
+                "id": "0F0102090306",
+                "name": "patch_entry"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T05:54:50.464071Z",
+        "level": "INFO",
+        "fields": {
+            "message": "req: name=some_item"
+        },
+        "target": "microservice::biz_router",
+        "filename": "microservice/biz_router.rs",
+        "line_number": 31,
+        "span": {
+            "id": "000A05080B01",
+            "name": "get_entry"
+        },
+        "spans": [
+            {
+                "id": "000A05080B01",
+                "name": "get_entry"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T05:54:50.464184Z",
+        "level": "ERROR",
+        "fields": {
+            "message": "resp: status=404 Not Found"
+        },
+        "target": "microservice::biz_router",
+        "filename": "microservice/biz_router.rs",
+        "line_number": 39,
+        "span": {
+            "id": "000A05080B01",
+            "name": "get_entry"
+        },
+        "spans": [
+            {
+                "id": "000A05080B01",
+                "name": "get_entry"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T05:54:58.911208Z",
+        "level": "INFO",
+        "fields": {
+            "message": "req: name=some_entry"
+        },
+        "target": "microservice::biz_router",
+        "filename": "microservice/biz_router.rs",
+        "line_number": 31,
+        "span": {
+            "id": "040A0E0D0603",
+            "name": "get_entry"
+        },
+        "spans": [
+            {
+                "id": "040A0E0D0603",
+                "name": "get_entry"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T05:54:58.911329Z",
+        "level": "INFO",
+        "fields": {
+            "message": "resp: value=property=Some Property, value=low"
+        },
+        "target": "microservice::biz_router",
+        "filename": "microservice/biz_router.rs",
+        "line_number": 35,
+        "span": {
+            "id": "040A0E0D0603",
+            "name": "get_entry"
+        },
+        "spans": [
+            {
+                "id": "040A0E0D0603",
+                "name": "get_entry"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T05:55:03.656481Z",
+        "level": "INFO",
+        "fields": {
+            "message": "req: name=some_entry"
+        },
+        "target": "microservice::biz_router",
+        "filename": "microservice/biz_router.rs",
+        "line_number": 31,
+        "span": {
+            "id": "0A040F080709",
+            "name": "get_entry"
+        },
+        "spans": [
+            {
+                "id": "0A040F080709",
+                "name": "get_entry"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T05:55:03.656616Z",
+        "level": "INFO",
+        "fields": {
+            "message": "resp: value=property=Some Property, value=low"
+        },
+        "target": "microservice::biz_router",
+        "filename": "microservice/biz_router.rs",
+        "line_number": 35,
+        "span": {
+            "id": "0A040F080709",
+            "name": "get_entry"
+        },
+        "spans": [
+            {
+                "id": "0A040F080709",
+                "name": "get_entry"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T05:55:07.430761Z",
+        "level": "INFO",
+        "fields": {
+            "message": "req: name=some_entry"
+        },
+        "target": "microservice::biz_router",
+        "filename": "microservice/biz_router.rs",
+        "line_number": 31,
+        "span": {
+            "id": "020607080F0E",
+            "name": "get_entry"
+        },
+        "spans": [
+            {
+                "id": "020607080F0E",
+                "name": "get_entry"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T05:55:07.430873Z",
+        "level": "INFO",
+        "fields": {
+            "message": "resp: value=property=Some Property, value=low"
+        },
+        "target": "microservice::biz_router",
+        "filename": "microservice/biz_router.rs",
+        "line_number": 35,
+        "span": {
+            "id": "020607080F0E",
+            "name": "get_entry"
+        },
+        "spans": [
+            {
+                "id": "020607080F0E",
+                "name": "get_entry"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T05:55:19.527566Z",
+        "level": "INFO",
+        "fields": {
+            "message": "req: payload=Entry { property: \"Some Property\", value: \"high\" }"
+        },
+        "target": "microservice::biz_router",
+        "filename": "microservice/biz_router.rs",
+        "line_number": 53,
+        "span": {
+            "id": "000D0B02090A",
+            "name": "post_entry"
+        },
+        "spans": [
+            {
+                "id": "000D0B02090A",
+                "name": "post_entry"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T05:55:24.515630Z",
+        "level": "INFO",
+        "fields": {
+            "message": "req: name=some_entry"
+        },
+        "target": "microservice::biz_router",
+        "filename": "microservice/biz_router.rs",
+        "line_number": 31,
+        "span": {
+            "id": "0A080F030607",
+            "name": "get_entry"
+        },
+        "spans": [
+            {
+                "id": "0A080F030607",
+                "name": "get_entry"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T05:55:24.515750Z",
+        "level": "INFO",
+        "fields": {
+            "message": "resp: value=property=Some Property, value=high"
+        },
+        "target": "microservice::biz_router",
+        "filename": "microservice/biz_router.rs",
+        "line_number": 35,
+        "span": {
+            "id": "0A080F030607",
+            "name": "get_entry"
+        },
+        "spans": [
+            {
+                "id": "0A080F030607",
+                "name": "get_entry"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T05:56:02.262719Z",
+        "level": "INFO",
+        "fields": {
+            "message": "req: name=some_entry"
+        },
+        "target": "microservice::biz_router",
+        "filename": "microservice/biz_router.rs",
+        "line_number": 90,
+        "span": {
+            "id": "0B0C00060A08",
+            "name": "delete_entry"
+        },
+        "spans": [
+            {
+                "id": "0B0C00060A08",
+                "name": "delete_entry"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T05:56:02.262832Z",
+        "level": "INFO",
+        "fields": {
+            "message": "Removed item: some_entry:property=Some Property, value=high"
+        },
+        "target": "microservice::state",
+        "filename": "microservice/state.rs",
+        "line_number": 47,
+        "span": {
+            "id": "0B0C00060A08",
+            "name": "delete_entry"
+        },
+        "spans": [
+            {
+                "id": "0B0C00060A08",
+                "name": "delete_entry"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T05:56:05.373887Z",
+        "level": "INFO",
+        "fields": {
+            "message": "req: name=some_entry"
+        },
+        "target": "microservice::biz_router",
+        "filename": "microservice/biz_router.rs",
+        "line_number": 31,
+        "span": {
+            "id": "0700050D0D02",
+            "name": "get_entry"
+        },
+        "spans": [
+            {
+                "id": "0700050D0D02",
+                "name": "get_entry"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T05:56:05.374002Z",
+        "level": "ERROR",
+        "fields": {
+            "message": "resp: status=404 Not Found"
+        },
+        "target": "microservice::biz_router",
+        "filename": "microservice/biz_router.rs",
+        "line_number": 39,
+        "span": {
+            "id": "0700050D0D02",
+            "name": "get_entry"
+        },
+        "spans": [
+            {
+                "id": "0700050D0D02",
+                "name": "get_entry"
+            }
+        ]
+    }
+]
