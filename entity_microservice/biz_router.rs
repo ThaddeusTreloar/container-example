@@ -2,13 +2,14 @@ use std::sync::Arc;
 
 use axum::{
     extract::{Json, Path, State},
-    http::StatusCode,
+    http::{StatusCode, HeaderMap},
     response::IntoResponse,
     Router,
     routing::{delete, get, patch, post},
 };
 use shared::{
     prelude::*,
+    header_helper::get_logid,
     state::entity::{Entity, PartialEntity}
 };
 
@@ -23,10 +24,13 @@ pub fn get_router() -> Router<Arc<AppState<Entity>>> {
 }
 
 async fn get_entity(
+    headers: HeaderMap,
     Path(name): Path<String>,
     State(state): State<Arc<AppState<Entity>>>,
 ) -> Result<impl IntoResponse, StatusCode> {
-    let span = span!(Level::INFO, "get_property", id = generate_trace_id());
+    let id = get_logid(headers).await;
+
+    let span = span!(Level::INFO, "get_property", id = id);
     let _enter = span.enter();
 
     info!("req: name={}", name);
@@ -44,11 +48,15 @@ async fn get_entity(
 }
 
 async fn post_entity(
+    headers: HeaderMap,
     Path(name): Path<String>,
     State(state): State<Arc<AppState<Entity>>>,
     Json(payload): Json<Entity>,
 ) -> Result<impl IntoResponse, StatusCode> {
-    let span = span!(Level::INFO, "post_property", id = generate_trace_id());
+    let id = get_logid(headers).await;
+
+    let span = span!(Level::INFO, "post_property", id = id);
+
     let _enter = span.enter();
 
     info!("req: payload={:?}", payload);
@@ -59,11 +67,14 @@ async fn post_entity(
 }
 
 async fn patch_entity(
+    headers: HeaderMap,
     Path(name): Path<String>,
     State(state): State<Arc<AppState<Entity>>>,
     Json(payload): Json<PartialEntity>,
 ) -> Result<impl IntoResponse, StatusCode> {
-    let span = span!(Level::INFO, "patch_property", id = generate_trace_id());
+    let id = get_logid(headers).await;
+
+    let span = span!(Level::INFO, "patch_property", id = id);
     let _enter = span.enter();
 
     info!("req: payload={:?}", payload);
@@ -82,10 +93,13 @@ async fn patch_entity(
 }
 
 async fn delete_entity(
+    headers: HeaderMap,
     Path(name): Path<String>,
     State(state): State<Arc<AppState<Entity>>>,
 ) -> Result<impl IntoResponse, StatusCode> {
-    let span = span!(Level::INFO, "delete_property", id = generate_trace_id());
+    let id = get_logid(headers).await;
+
+    let span = span!(Level::INFO, "delete_property", id = id);
     let _enter = span.enter();
 
     info!("req: name={}", name);

@@ -1,9 +1,10 @@
 use std::fmt::{Formatter, Display};
+use serde::{Serialize, Deserialize};
 
 use super::Partial;
 
 
-#[derive(Debug, Clone, serde::Deserialize, serde::Serialize)]
+#[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct Property {
     property: String,
     value: String,
@@ -39,7 +40,7 @@ impl Property {
 }
 
 
-#[derive(Debug, Clone, serde::Deserialize, serde::Serialize)]
+#[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct PartialProperty {
     property: Option<String>,
     value: Option<String>,

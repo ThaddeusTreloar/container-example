@@ -2,14 +2,14 @@ use std::sync::Arc;
 
 use axum::{
     extract::{Json, Path, State},
-    http::StatusCode,
+    http::{StatusCode, HeaderMap},
     response::IntoResponse,
     Router,
     routing::{delete, get, patch, post},
 };
 use shared::{
     prelude::*,
-    state::property::{Property, PartialProperty}
+    state::property::{Property, PartialProperty}, header_helper::get_logid
 };
 
 use tracing::{error, info, span, Level};
@@ -23,10 +23,12 @@ pub fn get_router() -> Router<Arc<AppState<Property>>> {
 }
 
 async fn get_property(
+    headers: HeaderMap,
     Path(name): Path<String>,
     State(state): State<Arc<AppState<Property>>>,
 ) -> Result<impl IntoResponse, StatusCode> {
-    let span = span!(Level::INFO, "get_property", id = generate_trace_id());
+    let id = get_logid(headers).await;
+    let span = span!(Level::INFO, "get_property", id = id);
     let _enter = span.enter();
 
     info!("req: name={}", name);
@@ -44,11 +46,13 @@ async fn get_property(
 }
 
 async fn post_property(
+    headers: HeaderMap,
     Path(name): Path<String>,
     State(state): State<Arc<AppState<Property>>>,
     Json(payload): Json<Property>,
 ) -> Result<impl IntoResponse, StatusCode> {
-    let span = span!(Level::INFO, "post_property", id = generate_trace_id());
+    let id = get_logid(headers).await;
+    let span = span!(Level::INFO, "post_property", id = id);
     let _enter = span.enter();
 
     info!("req: payload={:?}", payload);
@@ -59,11 +63,13 @@ async fn post_property(
 }
 
 async fn patch_property(
+    headers: HeaderMap,
     Path(name): Path<String>,
     State(state): State<Arc<AppState<Property>>>,
     Json(payload): Json<PartialProperty>,
 ) -> Result<impl IntoResponse, StatusCode> {
-    let span = span!(Level::INFO, "patch_property", id = generate_trace_id());
+    let id = get_logid(headers).await;
+    let span = span!(Level::INFO, "patch_property", id = id);
     let _enter = span.enter();
 
     info!("req: payload={:?}", payload);
@@ -82,10 +88,12 @@ async fn patch_property(
 }
 
 async fn delete_property(
+    headers: HeaderMap,
     Path(name): Path<String>,
     State(state): State<Arc<AppState<Property>>>,
 ) -> Result<impl IntoResponse, StatusCode> {
-    let span = span!(Level::INFO, "delete_property", id = generate_trace_id());
+    let id = get_logid(headers).await;
+    let span = span!(Level::INFO, "delete_property", id = id);
     let _enter = span.enter();
 
     info!("req: name={}", name);

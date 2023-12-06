@@ -3,6 +3,7 @@ pub mod trace;
 pub mod util_router;
 pub mod state;
 pub mod result;
+pub mod header_helper;
 
 pub mod prelude {
     pub use crate::init::init_tracing;
