@@ -1,0 +1,80 @@
+{
+    "timestamp": "2023-12-06T09:45:14.927013Z",
+    "level": "INFO",
+    "fields": {
+        "message": "req: name=test"
+    },
+    "target": "combo_service::biz_router",
+    "filename": "combo_service/biz_router.rs",
+    "line_number": 56,
+    "span": {
+        "id": "000D0C080301",
+        "name": "get_property"
+    },
+    "spans": [
+        {
+            "id": "000D0C080301",
+            "name": "get_property"
+        }
+    ]
+}
+{
+    "timestamp": "2023-12-06T09:45:14.927098Z",
+    "level": "INFO",
+    "fields": {
+        "message": "requesting entity from: entity_address=http://localhost:8080/entity/test"
+    },
+    "target": "combo_service::biz_router",
+    "filename": "combo_service/biz_router.rs",
+    "line_number": 62,
+    "span": {
+        "id": "000D0C080301",
+        "name": "get_property"
+    },
+    "spans": [
+        {
+            "id": "000D0C080301",
+            "name": "get_property"
+        }
+    ]
+}
+{
+    "timestamp": "2023-12-06T09:45:14.928128Z",
+    "level": "INFO",
+    "fields": {
+        "message": "entity_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"localhost\")), port: Some(8080), path: \"/entity/test\", query: None, fragment: None }, status: 404, headers: {\"content-length\": \"0\", \"date\": \"Wed, 06 Dec 2023 09:45:14 GMT\"} }"
+    },
+    "target": "combo_service::biz_router",
+    "filename": "combo_service/biz_router.rs",
+    "line_number": 72,
+    "span": {
+        "id": "000D0C080301",
+        "name": "get_property"
+    },
+    "spans": [
+        {
+            "id": "000D0C080301",
+            "name": "get_property"
+        }
+    ]
+}
+{
+    "timestamp": "2023-12-06T09:45:14.928204Z",
+    "level": "ERROR",
+    "fields": {
+        "message": "error decoding response body: EOF while parsing a value at line 1 column 0"
+    },
+    "target": "shared::result",
+    "filename": "shared/result.rs",
+    "line_number": 36,
+    "span": {
+        "id": "000D0C080301",
+        "name": "get_property"
+    },
+    "spans": [
+        {
+            "id": "000D0C080301",
+            "name": "get_property"
+        }
+    ]
+}

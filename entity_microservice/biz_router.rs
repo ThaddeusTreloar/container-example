@@ -16,13 +16,13 @@ use tracing::{error, info, span, Level};
 
 pub fn get_router() -> Router<Arc<AppState<Entity>>> {
     Router::new()
-        .route("/property/:name", get(get_property))
-        .route("/property/:name", delete(delete_property))
-        .route("/property/:name", post(post_property))
-        .route("/property/:name", patch(patch_property))
+        .route("/entity/:name", get(get_entity))
+        .route("/entity/:name", delete(delete_entity))
+        .route("/entity/:name", post(post_entity))
+        .route("/entity/:name", patch(patch_entity))
 }
 
-async fn get_property(
+async fn get_entity(
     Path(name): Path<String>,
     State(state): State<Arc<AppState<Entity>>>,
 ) -> Result<impl IntoResponse, StatusCode> {
@@ -43,7 +43,7 @@ async fn get_property(
     }
 }
 
-async fn post_property(
+async fn post_entity(
     Path(name): Path<String>,
     State(state): State<Arc<AppState<Entity>>>,
     Json(payload): Json<Entity>,
@@ -58,7 +58,7 @@ async fn post_property(
     Ok(StatusCode::CREATED.into_response())
 }
 
-async fn patch_property(
+async fn patch_entity(
     Path(name): Path<String>,
     State(state): State<Arc<AppState<Entity>>>,
     Json(payload): Json<PartialEntity>,
@@ -81,7 +81,7 @@ async fn patch_property(
     }
 }
 
-async fn delete_property(
+async fn delete_entity(
     Path(name): Path<String>,
     State(state): State<Arc<AppState<Entity>>>,
 ) -> Result<impl IntoResponse, StatusCode> {
