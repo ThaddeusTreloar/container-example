@@ -5,5 +5,5 @@ Content-Type: application/json
 
 {
   "origin" : "US",
-  "colour" : "yellow",
+  "colour" : "yellow"
 }
