@@ -109,6 +109,8 @@ services:
     environment:
       - BIN_NAME="combo_service"
       - LOG_PATH=/opt/thermite/var/log
+      - ENTITY_ADDRESS=entity_microservice
+      - PROPERTY_ADDRESS=property_microservice
       - ENTITY_PORT=8081
       - PROPERTY_PORT=8082
 

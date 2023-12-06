@@ -33,11 +33,41 @@ pub fn get_router() -> Router<Arc<Client>>
 async fn get_port_for_service(service: &str) -> String {
     OnceCell::<String>::new()
         .get_or_init(|| async {
-            let service_key = format!("{}_port", service.to_uppercase());
+            let service_key = format!("{}_port", service).to_uppercase();
+
+            info!("got service_key={service_key}");
 
             match std::env::var(service_key) {
-                Ok(port) => port,
-                Err(_) => "8080".to_string(),
+                Ok(port) => {
+                    info!("got service={service}, port={port}");
+                    port
+                },
+                Err(_) => {
+                    warn!("using default port for service={service}");
+                    "8080".to_string()
+                },
+            }
+        })
+        .await
+        .clone()
+}
+
+async fn get_address_for_service(service: &str) -> String {
+    OnceCell::<String>::new()
+        .get_or_init(|| async {
+            let service_key = format!("{}_address", service).to_uppercase();
+
+            info!("got service_key={service_key}");
+
+            match std::env::var(service_key) {
+                Ok(address) => {
+                    info!("got service={service}, address={address}");
+                    address
+                },
+                Err(_) => {
+                    warn!("using default address for service={service}");
+                    service.to_string()
+                },
             }
         })
         .await
@@ -56,8 +86,9 @@ async fn get_combo(
     info!("req: name={}", name);
 
     let entity_port = get_port_for_service("entity").await;
+    let entity_domain = get_address_for_service("entity").await;
 
-    let entity_address = format!("http://localhost:{entity_port}/entity/{name}");
+    let entity_address = format!("http://localhost:{entity_domain}:{entity_port}/entity/{name}");
 
     info!("requesting entity from: entity_address={}", entity_address);
 
@@ -78,8 +109,9 @@ async fn get_combo(
         .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
 
     let property_port = get_port_for_service("property").await;
-
-    let property_address = format!("http://localhost:{property_port}/property/{name}");
+    let property_domain = get_address_for_service("property").await;
+    
+    let property_address = format!("http://{property_domain}:{property_port}/property/{name}");
 
     info!("requesting property from: property_address={}", property_address);
 
@@ -120,12 +152,14 @@ async fn post_combo(
 
     // Build requests
     let entity_port = get_port_for_service("entity").await;
+    let entity_domain = get_address_for_service("entity").await;
 
-    let entity_address = format!("http://localhost:{entity_port}/entity/{name}");
+    let entity_address = format!("http://localhost:{entity_domain}:{entity_port}/entity/{name}");
 
     let property_port = get_port_for_service("property").await;
-
-    let property_address = format!("http://localhost:{property_port}/property/{name}");
+    let property_domain = get_address_for_service("property").await;
+    
+    let property_address = format!("http://{property_domain}:{property_port}/property/{name}");
 
     // Build Bodies
     let entity_body = serde_json::to_string(&payload)
@@ -188,12 +222,14 @@ async fn patch_combo(
 
     // Build Targets
     let entity_port = get_port_for_service("entity").await;
+    let entity_domain = get_address_for_service("entity").await;
 
-    let entity_address = format!("http://localhost:{entity_port}/entity/{name}");
+    let entity_address = format!("http://localhost:{entity_domain}:{entity_port}/entity/{name}");
 
     let property_port = get_port_for_service("property").await;
+    let property_domain = get_address_for_service("property").await;
 
-    let property_address = format!("http://localhost:{property_port}/property/{name}");
+    let property_address = format!("http://{property_domain}:{property_port}/property/{name}");
 
     // Get existing
     info!("requesting entity from: entity_address={}", entity_address);
@@ -295,12 +331,14 @@ async fn delete_combo(
     info!("req: name={}", name);
 
     let entity_port = get_port_for_service("entity").await;
+    let entity_domain = get_address_for_service("entity").await;
 
-    let entity_address = format!("http://localhost:{entity_port}/entity/{name}");
+    let entity_address = format!("http://localhost:{entity_domain}:{entity_port}/entity/{name}");
 
     let property_port = get_port_for_service("property").await;
-
-    let property_address = format!("http://localhost:{property_port}/property/{name}");
+    let property_domain = get_address_for_service("property").await;
+    
+    let property_address = format!("http://{property_domain}:{property_port}/property/{name}");
 
     info!("deleting entity from: entity_address={}", entity_address);
 
