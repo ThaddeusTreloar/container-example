@@ -6,7 +6,7 @@ FROM rust:latest as builder
 WORKDIR /build
 
 # Copy the Cargo.toml and Cargo.lock files to the container
-COPY Cargo.toml Cargo.lock ./
+COPY Cargo.toml ./
 
 # Copy the source code to the container
 COPY combo_service ./combo_service

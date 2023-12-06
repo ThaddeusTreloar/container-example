@@ -5,8 +5,8 @@ FROM rust:latest as builder
 # Set the working directory inside the container
 WORKDIR /build
 
-# Copy the Cargo.toml and Cargo.lock files to the container
-COPY Cargo.toml Cargo.lock ./
+# Copy the Cargo.toml  files to the container
+COPY Cargo.toml ./
 
 # Copy the source code to the container
 COPY entity_microservice ./entity_microservice
