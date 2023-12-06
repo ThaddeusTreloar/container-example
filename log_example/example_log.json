@@ -1,0 +1,1030 @@
+[
+    {
+        "timestamp": "2023-12-06T09:58:51.165527Z",
+        "level": "INFO",
+        "fields": {
+            "message": "req: name=test"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 86,
+        "span": {
+            "id": "030C08090D02",
+            "name": "get_property"
+        },
+        "spans": [
+            {
+                "id": "030C08090D02",
+                "name": "get_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T09:58:51.165644Z",
+        "level": "INFO",
+        "fields": {
+            "message": "got service_key=ENTITY_PORT"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 38,
+        "span": {
+            "id": "030C08090D02",
+            "name": "get_property"
+        },
+        "spans": [
+            {
+                "id": "030C08090D02",
+                "name": "get_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T09:58:51.165670Z",
+        "level": "INFO",
+        "fields": {
+            "message": "got service=entity, port=8081"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 42,
+        "span": {
+            "id": "030C08090D02",
+            "name": "get_property"
+        },
+        "spans": [
+            {
+                "id": "030C08090D02",
+                "name": "get_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T09:58:51.165695Z",
+        "level": "INFO",
+        "fields": {
+            "message": "got service_key=ENTITY_ADDRESS"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 60,
+        "span": {
+            "id": "030C08090D02",
+            "name": "get_property"
+        },
+        "spans": [
+            {
+                "id": "030C08090D02",
+                "name": "get_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T09:58:51.165714Z",
+        "level": "INFO",
+        "fields": {
+            "message": "got service=entity, address=entity_microservice"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 64,
+        "span": {
+            "id": "030C08090D02",
+            "name": "get_property"
+        },
+        "spans": [
+            {
+                "id": "030C08090D02",
+                "name": "get_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T09:58:51.165736Z",
+        "level": "INFO",
+        "fields": {
+            "message": "requesting entity from: entity_address=http://localhost:entity_microservice:8081/entity/test"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 93,
+        "span": {
+            "id": "030C08090D02",
+            "name": "get_property"
+        },
+        "spans": [
+            {
+                "id": "030C08090D02",
+                "name": "get_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T09:58:51.165855Z",
+        "level": "ERROR",
+        "fields": {
+            "message": "builder error: invalid port number"
+        },
+        "target": "shared::result",
+        "filename": "shared/result.rs",
+        "line_number": 36,
+        "span": {
+            "id": "030C08090D02",
+            "name": "get_property"
+        },
+        "spans": [
+            {
+                "id": "030C08090D02",
+                "name": "get_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:00:47.267998Z",
+        "level": "INFO",
+        "fields": {
+            "message": "Starting combo_service"
+        },
+        "target": "combo_service",
+        "filename": "combo_service/main.rs",
+        "line_number": 15
+    },
+    {
+        "timestamp": "2023-12-06T10:00:47.268084Z",
+        "level": "INFO",
+        "fields": {
+            "message": "Creating client pool"
+        },
+        "target": "combo_service",
+        "filename": "combo_service/main.rs",
+        "line_number": 17
+    },
+    {
+        "timestamp": "2023-12-06T10:00:47.285007Z",
+        "level": "INFO",
+        "fields": {
+            "message": "Creating routers"
+        },
+        "target": "combo_service",
+        "filename": "combo_service/main.rs",
+        "line_number": 25
+    },
+    {
+        "timestamp": "2023-12-06T10:00:47.285267Z",
+        "level": "INFO",
+        "fields": {
+            "message": "Creating listener"
+        },
+        "target": "combo_service",
+        "filename": "combo_service/main.rs",
+        "line_number": 32
+    },
+    {
+        "timestamp": "2023-12-06T10:00:47.285373Z",
+        "level": "INFO",
+        "fields": {
+            "message": "Starting server"
+        },
+        "target": "combo_service",
+        "filename": "combo_service/main.rs",
+        "line_number": 36
+    },
+    {
+        "timestamp": "2023-12-06T10:01:05.241358Z",
+        "level": "INFO",
+        "fields": {
+            "message": "req: name=test"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 86,
+        "span": {
+            "id": "04020501050F",
+            "name": "get_property"
+        },
+        "spans": [
+            {
+                "id": "04020501050F",
+                "name": "get_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:01:05.241481Z",
+        "level": "INFO",
+        "fields": {
+            "message": "got service_key=ENTITY_PORT"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 38,
+        "span": {
+            "id": "04020501050F",
+            "name": "get_property"
+        },
+        "spans": [
+            {
+                "id": "04020501050F",
+                "name": "get_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:01:05.241522Z",
+        "level": "INFO",
+        "fields": {
+            "message": "got service=entity, port=8081"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 42,
+        "span": {
+            "id": "04020501050F",
+            "name": "get_property"
+        },
+        "spans": [
+            {
+                "id": "04020501050F",
+                "name": "get_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:01:05.241562Z",
+        "level": "INFO",
+        "fields": {
+            "message": "got service_key=ENTITY_ADDRESS"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 60,
+        "span": {
+            "id": "04020501050F",
+            "name": "get_property"
+        },
+        "spans": [
+            {
+                "id": "04020501050F",
+                "name": "get_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:01:05.241596Z",
+        "level": "INFO",
+        "fields": {
+            "message": "got service=entity, address=entity_microservice"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 64,
+        "span": {
+            "id": "04020501050F",
+            "name": "get_property"
+        },
+        "spans": [
+            {
+                "id": "04020501050F",
+                "name": "get_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:01:05.241631Z",
+        "level": "INFO",
+        "fields": {
+            "message": "requesting entity from: entity_address=http://entity_microservice:8081/entity/test"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 93,
+        "span": {
+            "id": "04020501050F",
+            "name": "get_property"
+        },
+        "spans": [
+            {
+                "id": "04020501050F",
+                "name": "get_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:01:05.243248Z",
+        "level": "INFO",
+        "fields": {
+            "message": "req: name=test"
+        },
+        "target": "entity_microservice::biz_router",
+        "filename": "entity_microservice/biz_router.rs",
+        "line_number": 32,
+        "span": {
+            "id": "07010F0B0302",
+            "name": "get_property"
+        },
+        "spans": [
+            {
+                "id": "07010F0B0302",
+                "name": "get_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:01:05.243337Z",
+        "level": "ERROR",
+        "fields": {
+            "message": "resp: status=404 Not Found"
+        },
+        "target": "entity_microservice::biz_router",
+        "filename": "entity_microservice/biz_router.rs",
+        "line_number": 40,
+        "span": {
+            "id": "07010F0B0302",
+            "name": "get_property"
+        },
+        "spans": [
+            {
+                "id": "07010F0B0302",
+                "name": "get_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:01:05.243627Z",
+        "level": "INFO",
+        "fields": {
+            "message": "entity_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"entity_microservice\")), port: Some(8081), path: \"/entity/test\", query: None, fragment: None }, status: 404, headers: {\"content-length\": \"0\", \"date\": \"Wed, 06 Dec 2023 10:01:05 GMT\"} }"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 103
+    },
+    {
+        "timestamp": "2023-12-06T10:01:05.243693Z",
+        "level": "ERROR",
+        "fields": {
+            "message": "error decoding response body: EOF while parsing a value at line 1 column 0"
+        },
+        "target": "shared::result",
+        "filename": "shared/result.rs",
+        "line_number": 36
+    },
+    {
+        "timestamp": "2023-12-06T10:01:16.703217Z",
+        "level": "INFO",
+        "fields": {
+            "message": "req: name=test"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 86,
+        "span": {
+            "id": "05080B07020C",
+            "name": "get_property"
+        },
+        "spans": [
+            {
+                "id": "05080B07020C",
+                "name": "get_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:01:16.703319Z",
+        "level": "INFO",
+        "fields": {
+            "message": "got service_key=ENTITY_PORT"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 38,
+        "span": {
+            "id": "05080B07020C",
+            "name": "get_property"
+        },
+        "spans": [
+            {
+                "id": "05080B07020C",
+                "name": "get_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:01:16.703357Z",
+        "level": "INFO",
+        "fields": {
+            "message": "got service=entity, port=8081"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 42,
+        "span": {
+            "id": "05080B07020C",
+            "name": "get_property"
+        },
+        "spans": [
+            {
+                "id": "05080B07020C",
+                "name": "get_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:01:16.703395Z",
+        "level": "INFO",
+        "fields": {
+            "message": "got service_key=ENTITY_ADDRESS"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 60,
+        "span": {
+            "id": "05080B07020C",
+            "name": "get_property"
+        },
+        "spans": [
+            {
+                "id": "05080B07020C",
+                "name": "get_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:01:16.703428Z",
+        "level": "INFO",
+        "fields": {
+            "message": "got service=entity, address=entity_microservice"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 64,
+        "span": {
+            "id": "05080B07020C",
+            "name": "get_property"
+        },
+        "spans": [
+            {
+                "id": "05080B07020C",
+                "name": "get_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:01:16.703482Z",
+        "level": "INFO",
+        "fields": {
+            "message": "requesting entity from: entity_address=http://entity_microservice:8081/entity/test"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 93,
+        "span": {
+            "id": "05080B07020C",
+            "name": "get_property"
+        },
+        "spans": [
+            {
+                "id": "05080B07020C",
+                "name": "get_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:01:16.703837Z",
+        "level": "INFO",
+        "fields": {
+            "message": "req: name=test"
+        },
+        "target": "entity_microservice::biz_router",
+        "filename": "entity_microservice/biz_router.rs",
+        "line_number": 32,
+        "span": {
+            "id": "0A020004010F",
+            "name": "get_property"
+        },
+        "spans": [
+            {
+                "id": "0A020004010F",
+                "name": "get_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:01:16.703865Z",
+        "level": "ERROR",
+        "fields": {
+            "message": "resp: status=404 Not Found"
+        },
+        "target": "entity_microservice::biz_router",
+        "filename": "entity_microservice/biz_router.rs",
+        "line_number": 40,
+        "span": {
+            "id": "0A020004010F",
+            "name": "get_property"
+        },
+        "spans": [
+            {
+                "id": "0A020004010F",
+                "name": "get_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:01:16.704112Z",
+        "level": "INFO",
+        "fields": {
+            "message": "entity_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"entity_microservice\")), port: Some(8081), path: \"/entity/test\", query: None, fragment: None }, status: 404, headers: {\"content-length\": \"0\", \"date\": \"Wed, 06 Dec 2023 10:01:16 GMT\"} }"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 103
+    },
+    {
+        "timestamp": "2023-12-06T10:01:16.704205Z",
+        "level": "ERROR",
+        "fields": {
+            "message": "error decoding response body: EOF while parsing a value at line 1 column 0"
+        },
+        "target": "shared::result",
+        "filename": "shared/result.rs",
+        "line_number": 36
+    },
+    {
+        "timestamp": "2023-12-06T10:02:36.733571Z",
+        "level": "INFO",
+        "fields": {
+            "message": "req: payload=MaybeCombo { origin: \"AU\", colour: \"blue\", property: Some(\"Some Property\"), value: Some(\"high\") }"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 151,
+        "span": {
+            "id": "0C020107060F",
+            "name": "post_property"
+        },
+        "spans": [
+            {
+                "id": "05080B07020C",
+                "name": "get_property"
+            },
+            {
+                "id": "0C020107060F",
+                "name": "post_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:02:36.733851Z",
+        "level": "INFO",
+        "fields": {
+            "message": "got service_key=ENTITY_PORT"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 38,
+        "span": {
+            "id": "0C020107060F",
+            "name": "post_property"
+        },
+        "spans": [
+            {
+                "id": "05080B07020C",
+                "name": "get_property"
+            },
+            {
+                "id": "0C020107060F",
+                "name": "post_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:02:36.733889Z",
+        "level": "INFO",
+        "fields": {
+            "message": "got service=entity, port=8081"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 42,
+        "span": {
+            "id": "0C020107060F",
+            "name": "post_property"
+        },
+        "spans": [
+            {
+                "id": "05080B07020C",
+                "name": "get_property"
+            },
+            {
+                "id": "0C020107060F",
+                "name": "post_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:02:36.733915Z",
+        "level": "INFO",
+        "fields": {
+            "message": "got service_key=ENTITY_ADDRESS"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 60,
+        "span": {
+            "id": "0C020107060F",
+            "name": "post_property"
+        },
+        "spans": [
+            {
+                "id": "05080B07020C",
+                "name": "get_property"
+            },
+            {
+                "id": "0C020107060F",
+                "name": "post_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:02:36.733935Z",
+        "level": "INFO",
+        "fields": {
+            "message": "got service=entity, address=entity_microservice"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 64,
+        "span": {
+            "id": "0C020107060F",
+            "name": "post_property"
+        },
+        "spans": [
+            {
+                "id": "05080B07020C",
+                "name": "get_property"
+            },
+            {
+                "id": "0C020107060F",
+                "name": "post_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:02:36.734159Z",
+        "level": "INFO",
+        "fields": {
+            "message": "got service_key=PROPERTY_PORT"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 38,
+        "span": {
+            "id": "0C020107060F",
+            "name": "post_property"
+        },
+        "spans": [
+            {
+                "id": "05080B07020C",
+                "name": "get_property"
+            },
+            {
+                "id": "0C020107060F",
+                "name": "post_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:02:36.734185Z",
+        "level": "INFO",
+        "fields": {
+            "message": "got service=property, port=8082"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 42,
+        "span": {
+            "id": "0C020107060F",
+            "name": "post_property"
+        },
+        "spans": [
+            {
+                "id": "05080B07020C",
+                "name": "get_property"
+            },
+            {
+                "id": "0C020107060F",
+                "name": "post_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:02:36.734219Z",
+        "level": "INFO",
+        "fields": {
+            "message": "got service_key=PROPERTY_ADDRESS"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 60,
+        "span": {
+            "id": "0C020107060F",
+            "name": "post_property"
+        },
+        "spans": [
+            {
+                "id": "05080B07020C",
+                "name": "get_property"
+            },
+            {
+                "id": "0C020107060F",
+                "name": "post_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:02:36.734262Z",
+        "level": "INFO",
+        "fields": {
+            "message": "got service=property, address=property_microservice"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 64,
+        "span": {
+            "id": "0C020107060F",
+            "name": "post_property"
+        },
+        "spans": [
+            {
+                "id": "05080B07020C",
+                "name": "get_property"
+            },
+            {
+                "id": "0C020107060F",
+                "name": "post_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:02:36.734308Z",
+        "level": "INFO",
+        "fields": {
+            "message": "sending entity post to: entity_address=http://entity_microservice:8081/entity/test"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 182,
+        "span": {
+            "id": "0C020107060F",
+            "name": "post_property"
+        },
+        "spans": [
+            {
+                "id": "05080B07020C",
+                "name": "get_property"
+            },
+            {
+                "id": "0C020107060F",
+                "name": "post_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:02:36.735340Z",
+        "level": "INFO",
+        "fields": {
+            "message": "entity_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"entity_microservice\")), port: Some(8081), path: \"/entity/test\", query: None, fragment: None }, status: 415, headers: {\"content-type\": \"text/plain; charset=utf-8\", \"content-length\": \"54\", \"date\": \"Wed, 06 Dec 2023 10:02:36 GMT\"} }"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 193
+    },
+    {
+        "timestamp": "2023-12-06T10:02:36.735451Z",
+        "level": "INFO",
+        "fields": {
+            "message": "sending property post to: property_address=http://property_microservice:8082/property/test"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 195
+    },
+    {
+        "timestamp": "2023-12-06T10:02:36.737835Z",
+        "level": "INFO",
+        "fields": {
+            "message": "property_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"property_microservice\")), port: Some(8082), path: \"/property/test\", query: None, fragment: None }, status: 415, headers: {\"content-type\": \"text/plain; charset=utf-8\", \"content-length\": \"54\", \"date\": \"Wed, 06 Dec 2023 10:02:36 GMT\"} }"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 206
+    },
+    {
+        "timestamp": "2023-12-06T10:02:46.315314Z",
+        "level": "INFO",
+        "fields": {
+            "message": "req: name=test"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 86,
+        "span": {
+            "id": "03010C0A0608",
+            "name": "get_property"
+        },
+        "spans": [
+            {
+                "id": "03010C0A0608",
+                "name": "get_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:02:46.315385Z",
+        "level": "INFO",
+        "fields": {
+            "message": "got service_key=ENTITY_PORT"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 38,
+        "span": {
+            "id": "03010C0A0608",
+            "name": "get_property"
+        },
+        "spans": [
+            {
+                "id": "03010C0A0608",
+                "name": "get_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:02:46.315405Z",
+        "level": "INFO",
+        "fields": {
+            "message": "got service=entity, port=8081"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 42,
+        "span": {
+            "id": "03010C0A0608",
+            "name": "get_property"
+        },
+        "spans": [
+            {
+                "id": "03010C0A0608",
+                "name": "get_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:02:46.315425Z",
+        "level": "INFO",
+        "fields": {
+            "message": "got service_key=ENTITY_ADDRESS"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 60,
+        "span": {
+            "id": "03010C0A0608",
+            "name": "get_property"
+        },
+        "spans": [
+            {
+                "id": "03010C0A0608",
+                "name": "get_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:02:46.315442Z",
+        "level": "INFO",
+        "fields": {
+            "message": "got service=entity, address=entity_microservice"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 64,
+        "span": {
+            "id": "03010C0A0608",
+            "name": "get_property"
+        },
+        "spans": [
+            {
+                "id": "03010C0A0608",
+                "name": "get_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:02:46.315460Z",
+        "level": "INFO",
+        "fields": {
+            "message": "requesting entity from: entity_address=http://entity_microservice:8081/entity/test"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 93,
+        "span": {
+            "id": "03010C0A0608",
+            "name": "get_property"
+        },
+        "spans": [
+            {
+                "id": "03010C0A0608",
+                "name": "get_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:02:46.315782Z",
+        "level": "INFO",
+        "fields": {
+            "message": "req: name=test"
+        },
+        "target": "entity_microservice::biz_router",
+        "filename": "entity_microservice/biz_router.rs",
+        "line_number": 32,
+        "span": {
+            "id": "040B0C090405",
+            "name": "get_property"
+        },
+        "spans": [
+            {
+                "id": "040B0C090405",
+                "name": "get_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:02:46.315810Z",
+        "level": "ERROR",
+        "fields": {
+            "message": "resp: status=404 Not Found"
+        },
+        "target": "entity_microservice::biz_router",
+        "filename": "entity_microservice/biz_router.rs",
+        "line_number": 40,
+        "span": {
+            "id": "040B0C090405",
+            "name": "get_property"
+        },
+        "spans": [
+            {
+                "id": "040B0C090405",
+                "name": "get_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:02:46.315992Z",
+        "level": "INFO",
+        "fields": {
+            "message": "entity_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"entity_microservice\")), port: Some(8081), path: \"/entity/test\", query: None, fragment: None }, status: 404, headers: {\"content-length\": \"0\", \"date\": \"Wed, 06 Dec 2023 10:02:46 GMT\"} }"
+        },
+        "target": "combo_service::biz_router",
+        "filename": "combo_service/biz_router.rs",
+        "line_number": 103,
+        "span": {
+            "id": "0C020107060F",
+            "name": "post_property"
+        },
+        "spans": [
+            {
+                "id": "05080B07020C",
+                "name": "get_property"
+            },
+            {
+                "id": "0C020107060F",
+                "name": "post_property"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-12-06T10:02:46.316125Z",
+        "level": "ERROR",
+        "fields": {
+            "message": "error decoding response body: EOF while parsing a value at line 1 column 0"
+        },
+        "target": "shared::result",
+        "filename": "shared/result.rs",
+        "line_number": 36,
+        "span": {
+            "id": "0C020107060F",
+            "name": "post_property"
+        },
+        "spans": [
+            {
+                "id": "05080B07020C",
+                "name": "get_property"
+            },
+            {
+                "id": "0C020107060F",
+                "name": "post_property"
+            }
+        ]
+    }
+]
