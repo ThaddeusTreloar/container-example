@@ -10,6 +10,7 @@ COPY Cargo.toml ./
 
 # Copy the source code to the container
 COPY logging_processor ./logging_processor
+COPY shared ./shared
 
 # Build the application
 RUN cargo build --release --bin logging_processor

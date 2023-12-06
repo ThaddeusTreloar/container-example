@@ -2,4 +2,4 @@
 
 query=".[].span.id"
 
-cat log.json | jq -c "${query}" | jq -r | uniq
+cat log.json | jq -c "[.[] | select(.span != null)]" | jq -c ".[].span.id" | jq -r | sort | uniq
