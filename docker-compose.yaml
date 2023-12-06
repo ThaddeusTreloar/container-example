@@ -50,7 +50,7 @@ services:
   #  volumes:
   #    - shared-volume:/opt/thermite/var
   #  environment:
-  #    - BIN_NAME="fake_app"
+  #    - BIN_NAME=fake_app
   #    - LOG_PATH=/opt/thermite/var/log
   #  # Add your configuration for the main service here
   #
@@ -69,7 +69,7 @@ services:
       - "8081:8081"
 
     environment:
-      - BIN_NAME="entity_microservice"
+      - BIN_NAME=entity_microservice
       - LOG_PATH=/opt/thermite/var/log
       - PORT=8081
 
@@ -88,7 +88,7 @@ services:
       - "8082:8082"
 
     environment:
-      - BIN_NAME="property_microservice"
+      - BIN_NAME=property_microservice
       - LOG_PATH=/opt/thermite/var/log
       - PORT=8082
 
@@ -107,7 +107,7 @@ services:
       - "8080:8080"
 
     environment:
-      - BIN_NAME="combo_service"
+      - BIN_NAME=combo_service
       - LOG_PATH=/opt/thermite/var/log
       - ENTITY_ADDRESS=entity_microservice
       - PROPERTY_ADDRESS=property_microservice
