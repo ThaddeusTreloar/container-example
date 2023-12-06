@@ -1,6 +1,6 @@
 
 
-POST http://127.0.0.1:8081/entity/test
+POST http://127.0.0.1:8081/entity/entity_test
 Content-Type: application/json
 
 {

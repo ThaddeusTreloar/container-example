@@ -1,6 +1,6 @@
 
 
-POST http://127.0.0.1:8082/entry/test
+POST http://127.0.0.1:8082/property/property_test
 Content-Type: application/json
 
 {
