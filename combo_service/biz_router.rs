@@ -88,7 +88,7 @@ async fn get_combo(
     let entity_port = get_port_for_service("entity").await;
     let entity_domain = get_address_for_service("entity").await;
 
-    let entity_address = format!("http://localhost:{entity_domain}:{entity_port}/entity/{name}");
+    let entity_address = format!("http://{entity_domain}:{entity_port}/entity/{name}");
 
     info!("requesting entity from: entity_address={}", entity_address);
 
@@ -154,7 +154,7 @@ async fn post_combo(
     let entity_port = get_port_for_service("entity").await;
     let entity_domain = get_address_for_service("entity").await;
 
-    let entity_address = format!("http://localhost:{entity_domain}:{entity_port}/entity/{name}");
+    let entity_address = format!("http://{entity_domain}:{entity_port}/entity/{name}");
 
     let property_port = get_port_for_service("property").await;
     let property_domain = get_address_for_service("property").await;
@@ -224,7 +224,7 @@ async fn patch_combo(
     let entity_port = get_port_for_service("entity").await;
     let entity_domain = get_address_for_service("entity").await;
 
-    let entity_address = format!("http://localhost:{entity_domain}:{entity_port}/entity/{name}");
+    let entity_address = format!("http://{entity_domain}:{entity_port}/entity/{name}");
 
     let property_port = get_port_for_service("property").await;
     let property_domain = get_address_for_service("property").await;
@@ -333,7 +333,7 @@ async fn delete_combo(
     let entity_port = get_port_for_service("entity").await;
     let entity_domain = get_address_for_service("entity").await;
 
-    let entity_address = format!("http://localhost:{entity_domain}:{entity_port}/entity/{name}");
+    let entity_address = format!("http://{entity_domain}:{entity_port}/entity/{name}");
 
     let property_port = get_port_for_service("property").await;
     let property_domain = get_address_for_service("property").await;
