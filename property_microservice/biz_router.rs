@@ -27,10 +27,6 @@ async fn get_property(
     Path(name): Path<String>,
     State(state): State<Arc<AppState<Property>>>,
 ) -> Result<impl IntoResponse, StatusCode> {
-    let id = get_logid(headers).await;
-    let span = span!(Level::INFO, "get_property", id = id);
-    let _enter = span.enter();
-
     info!("req: name={}", name);
 
     match state.get(&name).await {
@@ -51,10 +47,6 @@ async fn post_property(
     State(state): State<Arc<AppState<Property>>>,
     Json(payload): Json<Property>,
 ) -> Result<impl IntoResponse, StatusCode> {
-    let id = get_logid(headers).await;
-    let span = span!(Level::INFO, "post_property", id = id);
-    let _enter = span.enter();
-
     info!("req: payload={:?}", payload);
 
     state.set(name.as_str(), &payload).await;
@@ -68,10 +60,6 @@ async fn patch_property(
     State(state): State<Arc<AppState<Property>>>,
     Json(payload): Json<PartialProperty>,
 ) -> Result<impl IntoResponse, StatusCode> {
-    let id = get_logid(headers).await;
-    let span = span!(Level::INFO, "patch_property", id = id);
-    let _enter = span.enter();
-
     info!("req: payload={:?}", payload);
 
     match state.get(&name).await {
@@ -92,10 +80,6 @@ async fn delete_property(
     Path(name): Path<String>,
     State(state): State<Arc<AppState<Property>>>,
 ) -> Result<impl IntoResponse, StatusCode> {
-    let id = get_logid(headers).await;
-    let span = span!(Level::INFO, "delete_property", id = id);
-    let _enter = span.enter();
-
     info!("req: name={}", name);
 
     state.rm(&name).await;

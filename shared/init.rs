@@ -1,10 +1,13 @@
-use std::{fmt::Display, sync::Arc};
+use std::{fmt::Display, sync::Arc, net::SocketAddr};
 
-use axum::Router;
+use axum::{Router, extract::{Request, ConnectInfo}};
+use http_body_util::Full;
+use hyper::body::Bytes;
+use tower_http::trace::TraceLayer;
 use tracing::info;
 use tracing_subscriber::prelude::*;
 
-use crate::{state::AppState, util_router};
+use crate::{state::AppState, util_router, header_helper::{get_logid, get_logid_blocking}, layer::{tracing_layer, logid_layer}};
 
 pub fn init_tracing() {
     let filter_layer = tracing_subscriber::filter::LevelFilter::INFO;
@@ -40,6 +43,8 @@ T: Clone + Display + Send + Sync + 'static
     let router = Router::new()
         .merge(util_router::get_router())
         .merge(router)
+        .layer(tracing_layer())
+        .layer(logid_layer())
         .with_state(app_state.clone());
 
     info!("Creating listener");

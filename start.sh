@@ -14,4 +14,4 @@ docker-compose up -d
 # Setup kafka topics
 docker-compose exec kafka kafka-topics.sh --create --topic log_sink --partitions 1 --replication-factor 1 --bootstrap-server kafka:9092
 
-docker-compose exec kafka kafka-console-consumer.sh --topic log_sink --bootstrap-server kafka:9092 --from-beginning
+#docker-compose exec kafka kafka-console-consumer.sh --topic log_sink --bootstrap-server kafka:9092 --from-beginning

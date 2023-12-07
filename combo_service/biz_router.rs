@@ -20,7 +20,7 @@ use shared::{
 };
 
 use tokio::sync::OnceCell;
-use tracing::{error, info, span, warn, Level};
+use tracing::{error, info, warn};
 
 pub fn get_router() -> Router<Arc<Client>> {
     Router::new()
@@ -92,11 +92,7 @@ async fn get_combo(
     Path(name): Path<String>,
     headers: HeaderMap
 ) -> Result<impl IntoResponse, StatusCode> {
-
     let id: String = shared::header_helper::get_logid(headers).await;
-
-    let span = span!(Level::INFO, "get_property", id = id);
-    let _enter = span.enter();
 
     info!("req: name={}", name);
 
@@ -179,9 +175,6 @@ async fn post_combo(
     Json(payload): Json<MaybeCombo>,
 ) -> Result<impl IntoResponse, StatusCode> {
     let id: String = shared::header_helper::get_logid(headers).await;
-
-    let span = span!(Level::INFO, "post_property", id = id);
-    let _enter = span.enter();
 
     info!("req: payload={:?}", payload);
 
@@ -279,10 +272,7 @@ async fn patch_combo(
     Path(name): Path<String>,
     Json(payload): Json<PartialCombo>,
 ) -> Result<impl IntoResponse, StatusCode> {
-    let id: String = shared::header_helper::get_logid(headers).await;    
-
-    let span = span!(Level::INFO, "patch_property", id = id);
-    let _enter = span.enter();
+    let id: String = shared::header_helper::get_logid(headers).await;
 
     info!("req: payload={:?}", payload);
 
@@ -427,9 +417,6 @@ async fn delete_combo(
     Path(name): Path<String>,
 ) -> Result<impl IntoResponse, StatusCode> {
     let id: String = shared::header_helper::get_logid(headers).await;
-
-    let span = span!(Level::INFO, "delete_property", id = id);
-    let _enter = span.enter();
 
     info!("req: name={}", name);
 

@@ -28,11 +28,6 @@ async fn get_entity(
     Path(name): Path<String>,
     State(state): State<Arc<AppState<Entity>>>,
 ) -> Result<impl IntoResponse, StatusCode> {
-    let id = get_logid(headers).await;
-
-    let span = span!(Level::INFO, "get_property", id = id);
-    let _enter = span.enter();
-
     info!("req: name={}", name);
 
     match state.get(&name).await {
@@ -53,12 +48,6 @@ async fn post_entity(
     State(state): State<Arc<AppState<Entity>>>,
     Json(payload): Json<Entity>,
 ) -> Result<impl IntoResponse, StatusCode> {
-    let id = get_logid(headers).await;
-
-    let span = span!(Level::INFO, "post_property", id = id);
-
-    let _enter = span.enter();
-
     info!("req: payload={:?}", payload);
 
     state.set(name.as_str(), &payload).await;
@@ -72,11 +61,6 @@ async fn patch_entity(
     State(state): State<Arc<AppState<Entity>>>,
     Json(payload): Json<PartialEntity>,
 ) -> Result<impl IntoResponse, StatusCode> {
-    let id = get_logid(headers).await;
-
-    let span = span!(Level::INFO, "patch_property", id = id);
-    let _enter = span.enter();
-
     info!("req: payload={:?}", payload);
 
     match state.get(&name).await {
@@ -97,11 +81,6 @@ async fn delete_entity(
     Path(name): Path<String>,
     State(state): State<Arc<AppState<Entity>>>,
 ) -> Result<impl IntoResponse, StatusCode> {
-    let id = get_logid(headers).await;
-
-    let span = span!(Level::INFO, "delete_property", id = id);
-    let _enter = span.enter();
-
     info!("req: name={}", name);
 
     state.rm(&name).await;
