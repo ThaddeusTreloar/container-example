@@ -12,17 +12,16 @@ use shared::{
     prelude::*,
     result::LoggableResult,
     state::{
-        combo::{Combo, self, MaybeCombo, PartialCombo},
+        combo::{self, Combo, MaybeCombo, PartialCombo},
         entity::{self, Entity},
-        property::{PartialProperty, Property, self},
+        property::{self, PartialProperty, Property},
     },
 };
 
 use tokio::sync::OnceCell;
-use tracing::{error, info, span, Level, warn};
+use tracing::{error, info, span, warn, Level};
 
-pub fn get_router() -> Router<Arc<Client>>
-{
+pub fn get_router() -> Router<Arc<Client>> {
     Router::new()
         .route("/combo/:name", get(get_combo))
         .route("/combo/:name", delete(delete_combo))
@@ -41,18 +40,18 @@ async fn get_port_for_service(service: &str) -> String {
                 Ok(port) => {
                     info!("got service={service}, port={port}");
                     port
-                },
+                }
                 Err(_) => {
                     warn!("using default port for service={service}");
                     "8080".to_string()
-                },
+                }
             }
         })
         .await
         .clone()
 }
 
-async fn get_address_for_service(service: &str) -> String {
+async fn get_canonical_name_for_service(service: &str) -> String {
     OnceCell::<String>::new()
         .get_or_init(|| async {
             let service_key = format!("{}_address", service).to_uppercase();
@@ -63,15 +62,28 @@ async fn get_address_for_service(service: &str) -> String {
                 Ok(address) => {
                     info!("got service={service}, address={address}");
                     address
-                },
+                }
                 Err(_) => {
                     warn!("using default address for service={service}");
                     service.to_string()
-                },
+                }
             }
         })
         .await
         .clone()
+}
+
+async fn get_address_for_servive(service: &str) -> String {
+    let port = get_port_for_service(service).await;
+    let domain = get_canonical_name_for_service(service).await;
+
+    format!("http://{domain}:{port}", domain = domain, port = port)
+}
+
+async fn get_path_for_service(service: &str, path: &str) -> String {
+    let address = get_address_for_servive(service).await;
+
+    format!("{address}/{path}")
 }
 
 async fn get_combo(
@@ -85,52 +97,71 @@ async fn get_combo(
 
     info!("req: name={}", name);
 
-    let entity_port = get_port_for_service("entity").await;
-    let entity_domain = get_address_for_service("entity").await;
+    let entity_address = get_path_for_service("entity", format!("entity/{name}").as_str()).await;
 
-    let entity_address = format!("http://{entity_domain}:{entity_port}/entity/{name}");
+    let property_address =
+        get_path_for_service("property", format!("property/{name}").as_str()).await;
 
     info!("requesting entity from: entity_address={}", entity_address);
 
-    let entity_response = client
-        .get(entity_address)
-        .header("logid", &id)
-        .send()
-        .await
-        .error()
-        .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+    let entity_response = match client.get(entity_address).header("logid", &id).send().await {
+        Ok(response) => response,
+        Err(e) => {
+            error!("error requesting entity: error={:?}", e);
+            return Err(StatusCode::INTERNAL_SERVER_ERROR);
+        }
+    };
 
     info!("entity_response={:?}", entity_response);
 
-    let entity: entity::Entity = entity_response
-        .json()
-        .await
-        .error()
-        .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+    let entity: entity::Entity = match entity_response.status() {
+        reqwest::StatusCode::NOT_FOUND => return Err(StatusCode::NOT_FOUND),
+        reqwest::StatusCode::OK => match entity_response.json().await {
+            Ok(entity) => entity,
+            Err(e) => {
+                error!("error parsing entity: error={:?}", e);
+                return Err(StatusCode::INTERNAL_SERVER_ERROR);
+            }
+        },
+        s => {
+            error!("unexpected status code: status_code={:?}", s);
+            return Err(StatusCode::INTERNAL_SERVER_ERROR);
+        }
+    };
 
-    let property_port = get_port_for_service("property").await;
-    let property_domain = get_address_for_service("property").await;
-    
-    let property_address = format!("http://{property_domain}:{property_port}/property/{name}");
+    info!(
+        "requesting property from: property_address={}",
+        property_address
+    );
 
-    info!("requesting property from: property_address={}", property_address);
-
-    let property_response = client
+    let property_response = match client
         .get(property_address)
         .header("logid", &id)
         .send()
         .await
-        .error()
-        .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+    {
+        Ok(response) => response,
+        Err(e) => {
+            error!("error requesting property: error={:?}", e);
+            return Err(StatusCode::INTERNAL_SERVER_ERROR);
+        }
+    };
 
     info!("property_response={:?}", property_response);
 
-    let property = match property_response.status() {
-        reqwest::StatusCode::OK => match property_response.json::<Property>().await {
-            Ok(property) => property,
-            Err(_) => return Err(StatusCode::INTERNAL_SERVER_ERROR),
+    let property = match property_response.status(){
+        reqwest::StatusCode::NOT_FOUND => return Err(StatusCode::NOT_FOUND),
+        reqwest::StatusCode::OK => match property_response.json().await {
+            Ok(entity) => entity,
+            Err(e) => {
+                error!("error parsing property: error={:?}", e);
+                return Err(StatusCode::INTERNAL_SERVER_ERROR);
+            }
         },
-        _ => Property::default(),
+        s => {
+            error!("unexpected status code: status_code={:?}", s);
+            return Err(StatusCode::INTERNAL_SERVER_ERROR);
+        }
     };
 
     let combo = Combo::from((entity, property));
@@ -150,60 +181,90 @@ async fn post_combo(
 
     info!("req: payload={:?}", payload);
 
-    // Build requests
-    let entity_port = get_port_for_service("entity").await;
-    let entity_domain = get_address_for_service("entity").await;
+    // Build request
 
-    let entity_address = format!("http://{entity_domain}:{entity_port}/entity/{name}");
+    let entity_address = get_path_for_service("entity", format!("entity/{name}").as_str()).await;
 
-    let property_port = get_port_for_service("property").await;
-    let property_domain = get_address_for_service("property").await;
-    
-    let property_address = format!("http://{property_domain}:{property_port}/property/{name}");
+    let property_address =
+        get_path_for_service("property", format!("property/{name}").as_str()).await;
 
     // Build Bodies
-    let entity_body = serde_json::to_string(&payload)
-        .error()
-        .map_err(|_| StatusCode::BAD_REQUEST)?;
+    let entity_body = match serde_json::to_string(&payload) {
+        Ok(body) => body,
+        Err(e) => {
+            error!("error serializing entity: error={:?}", e);
+            return Err(StatusCode::INTERNAL_SERVER_ERROR);
+        }
+    };
 
     let property = match payload.try_into() {
         Ok(property) => property,
         Err(e) => {
             warn!("Using default property");
             Property::default()
-        },
+        }
     };
-    
-    let property_body = serde_json::to_string(&property)
-        .map_err(|_| StatusCode::BAD_REQUEST)?;
+
+    let property_body = match serde_json::to_string(&property) {
+        Ok(body) => body,
+        Err(e) => {
+            error!("error serializing property: error={:?}", e);
+            return Err(StatusCode::INTERNAL_SERVER_ERROR);
+        }
+    };
 
     // Send requests
 
     info!("sending entity post to: entity_address={}", entity_address);
 
-    let entity_response = client
+    let entity_response = match client
         .post(entity_address)
         .header("logid", &id)
+        .header("content-type", "application/json")
         .body(entity_body)
         .send()
         .await
-        .error()
-        .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+    {
+        Ok(response) => response,
+        Err(e) => {
+            error!("error sending entity: error={:?}", e);
+            return Err(StatusCode::INTERNAL_SERVER_ERROR);
+        }
+    };
+
+    if !entity_response.status().is_success() {
+        error!("unexpected status code: status_code={:?}, reason={:?}", entity_response.status(), entity_response.status().canonical_reason());
+        return Err(StatusCode::INTERNAL_SERVER_ERROR);
+    }
 
     info!("entity_response={:?}", entity_response);
 
-    info!("sending property post to: property_address={}", property_address);
+    info!(
+        "sending property post to: property_address={}",
+        property_address
+    );
 
-    let property_response = client
+    let property_response = match client
         .post(property_address)
         .header("logid", &id)
+        .header("content-type", "application/json")
         .body(property_body)
         .send()
         .await
-        .error()
-        .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+    {
+        Ok(response) => response,
+        Err(e) => {
+            error!("error sending property: error={:?}", e);
+            return Err(StatusCode::INTERNAL_SERVER_ERROR);
+        }
+    };
 
     info!("property_response={:?}", property_response);
+
+    if !property_response.status().is_success() {
+        error!("unexpected status code: status_code={:?}, reason={:?}", property_response.status(), property_response.status().canonical_reason());
+        return Err(StatusCode::INTERNAL_SERVER_ERROR);
+    }
 
     Ok(StatusCode::CREATED.into_response())
 }
@@ -220,45 +281,56 @@ async fn patch_combo(
 
     info!("req: payload={:?}", payload);
 
-    // Build Targets
-    let entity_port = get_port_for_service("entity").await;
-    let entity_domain = get_address_for_service("entity").await;
+    // Build Target
 
-    let entity_address = format!("http://{entity_domain}:{entity_port}/entity/{name}");
+    let entity_address = get_path_for_service("entity", format!("entity/{name}").as_str()).await;
 
-    let property_port = get_port_for_service("property").await;
-    let property_domain = get_address_for_service("property").await;
-
-    let property_address = format!("http://{property_domain}:{property_port}/property/{name}");
+    let property_address =
+        get_path_for_service("property", format!("property/{name}").as_str()).await;
 
     // Get existing
     info!("requesting entity from: entity_address={}", entity_address);
 
-    let entity_response = client
+    let entity_response = match client
         .get(&entity_address)
         .header("logid", &id)
         .send()
         .await
-        .error()
-        .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+    {
+        Ok(response) => response,
+        Err(e) => {
+            error!("error requesting entity: error={:?}", e);
+            return Err(StatusCode::INTERNAL_SERVER_ERROR);
+        }
+    };
 
     info!("entity_response={:?}", entity_response);
 
-    let existing_entity: entity::Entity = entity_response
-        .json()
-        .await
-        .error()
-        .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+    let existing_entity: entity::Entity = match entity_response.json().await {
+        Ok(entity) => entity,
+        Err(e) => {
+            error!("error parsing entity: error={:?}", e);
+            return Err(StatusCode::INTERNAL_SERVER_ERROR);
+        }
+    };
 
-    info!("requesting property from: property_address={}", property_address);
+    info!(
+        "requesting property from: property_address={}",
+        property_address
+    );
 
-    let property_response = client
+    let property_response = match client
         .get(&property_address)
         .header("logid", &id)
         .send()
         .await
-        .error()
-        .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+    {
+        Ok(response) => response,
+        Err(e) => {
+            error!("error requesting property: error={:?}", e);
+            return Err(StatusCode::INTERNAL_SERVER_ERROR);
+        }
+    };
 
     info!("property_response={:?}", property_response);
 
@@ -282,37 +354,62 @@ async fn patch_combo(
     let updated_property: Property = updated_combo.clone().into();
 
     // Build Updates Bodies
-    let entity_body = serde_json::to_string(&updated_entity)
-    .map_err(|_| StatusCode::BAD_REQUEST)?;
+    let entity_body = match serde_json::to_string(&updated_entity) {
+        Ok(body) => body,
+        Err(e) => {
+            error!("error serializing entity: error={:?}", e);
+            return Err(StatusCode::INTERNAL_SERVER_ERROR);
+        }
+    };
 
-    let property_body = serde_json::to_string(&updated_property)
-    .map_err(|_| StatusCode::BAD_REQUEST)?;
+    let property_body = match serde_json::to_string(&updated_property) {
+        Ok(body) => body,
+        Err(e) => {
+            error!("error serializing property: error={:?}", e);
+            return Err(StatusCode::INTERNAL_SERVER_ERROR);
+        }
+    };
 
     // Send updates
 
     info!("sending entity patch to: entity_address={}", entity_address);
 
-    let entity_response = client
+    let entity_response = match client
         .post(entity_address)
         .header("logid", &id)
+        .header("content-type", "application/json")
         .body(entity_body)
         .send()
         .await
-        .error()
-        .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+    {
+        Ok(response) => response,
+        Err(e) => {
+            error!("error sending entity: error={:?}", e);
+            return Err(StatusCode::INTERNAL_SERVER_ERROR);
+        }
+    };
 
     info!("entity_response={:?}", entity_response);
 
-    info!("sending property patch to: property_address={}", property_address);
+    info!(
+        "sending property patch to: property_address={}",
+        property_address
+    );
 
-    let property_response = client
+    let property_response = match client
         .post(property_address)
         .header("logid", &id)
+        .header("content-type", "application/json")
         .body(property_body)
         .send()
         .await
-        .error()
-        .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+    {
+        Ok(response) => response,
+        Err(e) => {
+            error!("error sending property: error={:?}", e);
+            return Err(StatusCode::INTERNAL_SERVER_ERROR);
+        }
+    };
 
     info!("property_response={:?}", property_response);
 
@@ -330,39 +427,53 @@ async fn delete_combo(
 
     info!("req: name={}", name);
 
-    let entity_port = get_port_for_service("entity").await;
-    let entity_domain = get_address_for_service("entity").await;
+    let entity_address = get_path_for_service("entity", format!("entity/{name}").as_str()).await;
 
-    let entity_address = format!("http://{entity_domain}:{entity_port}/entity/{name}");
-
-    let property_port = get_port_for_service("property").await;
-    let property_domain = get_address_for_service("property").await;
-    
-    let property_address = format!("http://{property_domain}:{property_port}/property/{name}");
+    let property_address =
+        get_path_for_service("property", format!("property/{name}").as_str()).await;
 
     info!("deleting entity from: entity_address={}", entity_address);
 
-    let entity_response = client
+    let entity_response = match client
         .delete(entity_address)
         .header("logid", &id)
         .send()
         .await
-        .error()
-        .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+    {
+        Ok(response) => response,
+        Err(e) => {
+            error!("error requesting entity: error={:?}", e);
+            return Err(StatusCode::INTERNAL_SERVER_ERROR);
+        }
+    };
 
-    info!("response for entity deletion: response={:?}", entity_response);
+    info!(
+        "response for entity deletion: response={:?}",
+        entity_response
+    );
 
-    info!("deleting property from: property_address={}", property_address);
+    info!(
+        "deleting property from: property_address={}",
+        property_address
+    );
 
-    let property_response = client
+    let property_response = match client
         .delete(property_address)
         .header("logid", &id)
         .send()
         .await
-        .error()
-        .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+    {
+        Ok(response) => response,
+        Err(e) => {
+            error!("error requesting property: error={:?}", e);
+            return Err(StatusCode::INTERNAL_SERVER_ERROR);
+        }
+    };
 
-    info!("response for property deletion: response={:?}", property_response);
+    info!(
+        "response for property deletion: response={:?}",
+        property_response
+    );
 
     Ok(StatusCode::NO_CONTENT.into_response())
 }
