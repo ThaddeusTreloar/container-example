@@ -1,0 +1,9 @@
+
+
+PATCH http://127.0.0.1:8081/entity/combo_test
+Content-Type: application/json
+
+{
+  "origin" : "US",
+  "colour" : "green"
+}
