@@ -23,7 +23,7 @@ WORKDIR /opt/thermite/property_microservice
 
 # Copy the binary from the builder stage to the output container
 COPY --from=builder /build/target/release/property_microservice /opt/thermite/property_microservice/app
-COPY ./bootstrap.sh /opt/thermite/property_microservice/bootstrap.sh
+COPY ./bootstrap/bootstrap.sh /opt/thermite/property_microservice/bootstrap.sh
 RUN chmod 755 /opt/thermite/property_microservice/bootstrap.sh
 
 # Set the entrypoint command for the container

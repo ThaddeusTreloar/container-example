@@ -1,0 +1,9 @@
+
+
+PATCH http://127.0.0.1:8080/combo/proxy_test
+Content-Type: application/json
+
+{
+  "colour" : "mauve",
+  "value": "low"
+}

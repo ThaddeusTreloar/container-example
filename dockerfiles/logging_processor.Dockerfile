@@ -9,22 +9,23 @@ WORKDIR /build
 COPY Cargo.toml ./
 
 # Copy the source code to the container
-COPY combo_service ./combo_service
+COPY logging_processor ./logging_processor
 COPY shared ./shared
 
 # Build the application
-RUN cargo build --bin combo_service
+RUN cargo build --release --bin logging_processor
 
 # Stage 2: Create the output container
 FROM rust:latest
 
 # Set the working directory inside the container
-WORKDIR /opt/thermite/combo_service
+WORKDIR /opt/thermite/logging_processor
 
 # Copy the binary from the builder stage to the output container
-COPY --from=builder /build/target/debug/combo_service /opt/thermite/combo_service/app
-COPY ./bootstrap.sh /opt/thermite/combo_service/bootstrap.sh
-RUN chmod 755 /opt/thermite/combo_service/bootstrap.sh
+COPY --from=builder /build/target/release/logging_processor /opt/thermite/logging_processor/app
+
+COPY ./bootstrap/logging_processor_bootstrap.sh /opt/thermite/logging_processor/bootstrap.sh
+RUN chmod +x /opt/thermite/logging_processor/bootstrap.sh
 
 # Set the entrypoint command for the container
-CMD ["./bootstrap.sh", "./app" ]
+CMD ["./bootstrap.sh"]

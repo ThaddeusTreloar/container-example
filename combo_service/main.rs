@@ -29,9 +29,11 @@ async fn main() -> Result<(), Error> {
         .merge(biz_router::get_router())
         .with_state(app_state.clone());
 
+    let port = std::env::var("PORT").unwrap_or("8080".to_string());
+
     info!("Creating listener");
     let listener = tokio::net::TcpListener::
-        bind("0.0.0.0:8080").await?;
+        bind(format!("0.0.0.0:{port}")).await?;
 
     info!("Starting server");
     Ok(

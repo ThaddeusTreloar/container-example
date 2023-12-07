@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Build app and mesh containers
-docker build . -f ./init.Dockerfile  --tag init:latest
-docker build . -f ./logging_processor.Dockerfile  --tag logging_processor:latest
-docker build . -f ./fake_app --tag fake-logger:latest
-docker build . -f ./entity_microservice.Dockerfile --tag entity_microservice:latest
-docker build . -f ./property_microservice.Dockerfile --tag property_microservice:latest
-docker build . -f ./combo_service.Dockerfile --tag combo_service:latest
+docker build . -f ./dockerfiles/init.Dockerfile  --tag init:latest --no-cache
+docker build . -f ./dockerfiles/logging_processor.Dockerfile  --tag logging_processor:latest --no-cache
+docker build . -f ./dockerfiles/entity_microservice.Dockerfile --tag entity_microservice:latest --no-cache
+docker build . -f ./dockerfiles/property_microservice.Dockerfile --tag property_microservice:latest --no-cache
+docker build . -f ./dockerfiles/combo_service.Dockerfile --tag combo_service:latest --no-cache
+docker build . -f ./dockerfiles/proxy_handler.Dockerfile --tag proxy_handler:latest --no-cache
 
 # Start containers
 docker-compose up -d

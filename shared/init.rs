@@ -13,7 +13,8 @@ pub fn init_tracing() {
         .json()
         .flatten_event(true)
         .with_file(true)
-        .with_line_number(true);
+        .with_line_number(true)
+        .with_span_list(false);
 
     let subscriber = tracing_subscriber::Registry::default()
         .with(filter_layer)

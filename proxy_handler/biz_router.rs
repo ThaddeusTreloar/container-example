@@ -7,7 +7,6 @@ use axum::{
     routing::{delete, get, patch, post},
     Router,
 };
-use hyper::HeaderMap;
 use reqwest::Client;
 use shared::{
     prelude::*,
@@ -16,7 +15,7 @@ use shared::{
         combo::{self, Combo, MaybeCombo, PartialCombo},
         entity::{self, Entity},
         property::{self, PartialProperty, Property},
-    }, header_helper,
+    },
 };
 
 use tokio::sync::OnceCell;
@@ -75,8 +74,8 @@ async fn get_canonical_name_for_service(service: &str) -> String {
 }
 
 async fn get_address_for_servive(service: &str) -> String {
-    let port = get_port_for_service(service).await;
-    let domain = get_canonical_name_for_service(service).await;
+    let port = get_port_for_service("service").await;
+    let domain = get_canonical_name_for_service("service").await;
 
     format!("http://{domain}:{port}", domain = domain, port = port)
 }
@@ -90,10 +89,8 @@ async fn get_path_for_service(service: &str, path: &str) -> String {
 async fn get_combo(
     State(client): State<Arc<Client>>,
     Path(name): Path<String>,
-    headers: HeaderMap
 ) -> Result<impl IntoResponse, StatusCode> {
-
-    let id: String = shared::header_helper::get_logid(headers).await;
+    let id = generate_trace_id();
 
     let span = span!(Level::INFO, "get_property", id = id);
     let _enter = span.enter();
@@ -173,12 +170,11 @@ async fn get_combo(
 }
 
 async fn post_combo(
-    headers: HeaderMap,
     State(client): State<Arc<Client>>,
     Path(name): Path<String>,
     Json(payload): Json<MaybeCombo>,
 ) -> Result<impl IntoResponse, StatusCode> {
-    let id: String = shared::header_helper::get_logid(headers).await;
+    let id = generate_trace_id();
 
     let span = span!(Level::INFO, "post_property", id = id);
     let _enter = span.enter();
@@ -241,8 +237,15 @@ async fn post_combo(
         return Err(StatusCode::INTERNAL_SERVER_ERROR);
     }
 
+    info!("entity_response={:?}", entity_response);
+
+    info!(
+        "sending property post to: property_address={}",
+        property_address
+    );
+
     let property_response = match client
-        .post(&property_address)
+        .post(property_address)
         .header("logid", &id)
         .header("content-type", "application/json")
         .body(property_body)
@@ -256,13 +259,6 @@ async fn post_combo(
         }
     };
 
-    info!("entity_response={:?}", entity_response);
-
-    info!(
-        "sending property post to: property_address={}",
-        property_address
-    );
-
     info!("property_response={:?}", property_response);
 
     if !property_response.status().is_success() {
@@ -274,12 +270,11 @@ async fn post_combo(
 }
 
 async fn patch_combo(
-    headers: HeaderMap,    
     State(client): State<Arc<Client>>,
     Path(name): Path<String>,
     Json(payload): Json<PartialCombo>,
 ) -> Result<impl IntoResponse, StatusCode> {
-    let id: String = shared::header_helper::get_logid(headers).await;    
+    let id = generate_trace_id();
 
     let span = span!(Level::INFO, "patch_property", id = id);
     let _enter = span.enter();
@@ -422,11 +417,10 @@ async fn patch_combo(
 }
 
 async fn delete_combo(
-    headers: HeaderMap,
     State(client): State<Arc<Client>>,
     Path(name): Path<String>,
 ) -> Result<impl IntoResponse, StatusCode> {
-    let id: String = shared::header_helper::get_logid(headers).await;
+    let id = generate_trace_id();
 
     let span = span!(Level::INFO, "delete_property", id = id);
     let _enter = span.enter();

@@ -45,21 +45,6 @@ services:
     networks:
       - service-net
 
-  #fake_app:
-  #  image: fake-logger:latest
-  #  volumes:
-  #    - shared-volume:/opt/thermite/var
-  #  environment:
-  #    - BIN_NAME=fake_app
-  #    - LOG_PATH=/opt/thermite/var/log
-  #  # Add your configuration for the main service here
-  #
-  #  depends_on:
-  #    - init
-  #
-  #  networks:
-  #    - service-net
-
   entity_microservice:
     image: entity_microservice:latest
     volumes:
@@ -104,7 +89,7 @@ services:
       - shared-volume:/opt/thermite/var
 
     ports:
-      - "8080:8080"
+      - "8083:8083"
 
     environment:
       - BIN_NAME=combo_service
@@ -113,9 +98,33 @@ services:
       - PROPERTY_ADDRESS=property_microservice
       - ENTITY_PORT=8081
       - PROPERTY_PORT=8082
+      - PORT=8083
 
     depends_on:
       - init
+
+    networks:
+      - service-net
+
+  proxy_handler:
+    image: proxy_handler:latest
+    volumes:
+      - shared-volume:/opt/thermite/var
+
+    ports:
+      - "8080:8080"
+
+    environment:
+      - BIN_NAME=proxy_handler
+      - LOG_PATH=/opt/thermite/var/log
+      - SERVICE_PORT=8083
+      - SERVICE_ADDRESS=combo_service
+      - SERVICE_NAME=combo_service
+      - PORT=8080
+
+    depends_on:
+      - init
+      - combo_service
 
     networks:
       - service-net
@@ -135,6 +144,7 @@ services:
       - property_microservice
       - entity_microservice
       - combo_service
+      - proxy_handler
 
     networks:
       - service-net
