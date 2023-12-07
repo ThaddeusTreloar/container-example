@@ -11,6 +11,7 @@ pub fn init_tracing() {
     
     let fmt_layer = tracing_subscriber::fmt::layer()
         .json()
+        .flatten_event(true)
         .with_file(true)
         .with_line_number(true);
 

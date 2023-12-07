@@ -1,1030 +1,238 @@
-[
-    {
-        "timestamp": "2023-12-06T09:58:51.165527Z",
-        "level": "INFO",
-        "fields": {
-            "message": "req: name=test"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 86,
-        "span": {
-            "id": "030C08090D02",
-            "name": "get_property"
-        },
-        "spans": [
-            {
-                "id": "030C08090D02",
-                "name": "get_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T09:58:51.165644Z",
-        "level": "INFO",
-        "fields": {
-            "message": "got service_key=ENTITY_PORT"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 38,
-        "span": {
-            "id": "030C08090D02",
-            "name": "get_property"
-        },
-        "spans": [
-            {
-                "id": "030C08090D02",
-                "name": "get_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T09:58:51.165670Z",
-        "level": "INFO",
-        "fields": {
-            "message": "got service=entity, port=8081"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 42,
-        "span": {
-            "id": "030C08090D02",
-            "name": "get_property"
-        },
-        "spans": [
-            {
-                "id": "030C08090D02",
-                "name": "get_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T09:58:51.165695Z",
-        "level": "INFO",
-        "fields": {
-            "message": "got service_key=ENTITY_ADDRESS"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 60,
-        "span": {
-            "id": "030C08090D02",
-            "name": "get_property"
-        },
-        "spans": [
-            {
-                "id": "030C08090D02",
-                "name": "get_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T09:58:51.165714Z",
-        "level": "INFO",
-        "fields": {
-            "message": "got service=entity, address=entity_microservice"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 64,
-        "span": {
-            "id": "030C08090D02",
-            "name": "get_property"
-        },
-        "spans": [
-            {
-                "id": "030C08090D02",
-                "name": "get_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T09:58:51.165736Z",
-        "level": "INFO",
-        "fields": {
-            "message": "requesting entity from: entity_address=http://localhost:entity_microservice:8081/entity/test"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 93,
-        "span": {
-            "id": "030C08090D02",
-            "name": "get_property"
-        },
-        "spans": [
-            {
-                "id": "030C08090D02",
-                "name": "get_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T09:58:51.165855Z",
-        "level": "ERROR",
-        "fields": {
-            "message": "builder error: invalid port number"
-        },
-        "target": "shared::result",
-        "filename": "shared/result.rs",
-        "line_number": 36,
-        "span": {
-            "id": "030C08090D02",
-            "name": "get_property"
-        },
-        "spans": [
-            {
-                "id": "030C08090D02",
-                "name": "get_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:00:47.267998Z",
-        "level": "INFO",
-        "fields": {
-            "message": "Starting combo_service"
-        },
-        "target": "combo_service",
-        "filename": "combo_service/main.rs",
-        "line_number": 15
-    },
-    {
-        "timestamp": "2023-12-06T10:00:47.268084Z",
-        "level": "INFO",
-        "fields": {
-            "message": "Creating client pool"
-        },
-        "target": "combo_service",
-        "filename": "combo_service/main.rs",
-        "line_number": 17
-    },
-    {
-        "timestamp": "2023-12-06T10:00:47.285007Z",
-        "level": "INFO",
-        "fields": {
-            "message": "Creating routers"
-        },
-        "target": "combo_service",
-        "filename": "combo_service/main.rs",
-        "line_number": 25
-    },
-    {
-        "timestamp": "2023-12-06T10:00:47.285267Z",
-        "level": "INFO",
-        "fields": {
-            "message": "Creating listener"
-        },
-        "target": "combo_service",
-        "filename": "combo_service/main.rs",
-        "line_number": 32
-    },
-    {
-        "timestamp": "2023-12-06T10:00:47.285373Z",
-        "level": "INFO",
-        "fields": {
-            "message": "Starting server"
-        },
-        "target": "combo_service",
-        "filename": "combo_service/main.rs",
-        "line_number": 36
-    },
-    {
-        "timestamp": "2023-12-06T10:01:05.241358Z",
-        "level": "INFO",
-        "fields": {
-            "message": "req: name=test"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 86,
-        "span": {
-            "id": "04020501050F",
-            "name": "get_property"
-        },
-        "spans": [
-            {
-                "id": "04020501050F",
-                "name": "get_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:01:05.241481Z",
-        "level": "INFO",
-        "fields": {
-            "message": "got service_key=ENTITY_PORT"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 38,
-        "span": {
-            "id": "04020501050F",
-            "name": "get_property"
-        },
-        "spans": [
-            {
-                "id": "04020501050F",
-                "name": "get_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:01:05.241522Z",
-        "level": "INFO",
-        "fields": {
-            "message": "got service=entity, port=8081"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 42,
-        "span": {
-            "id": "04020501050F",
-            "name": "get_property"
-        },
-        "spans": [
-            {
-                "id": "04020501050F",
-                "name": "get_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:01:05.241562Z",
-        "level": "INFO",
-        "fields": {
-            "message": "got service_key=ENTITY_ADDRESS"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 60,
-        "span": {
-            "id": "04020501050F",
-            "name": "get_property"
-        },
-        "spans": [
-            {
-                "id": "04020501050F",
-                "name": "get_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:01:05.241596Z",
-        "level": "INFO",
-        "fields": {
-            "message": "got service=entity, address=entity_microservice"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 64,
-        "span": {
-            "id": "04020501050F",
-            "name": "get_property"
-        },
-        "spans": [
-            {
-                "id": "04020501050F",
-                "name": "get_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:01:05.241631Z",
-        "level": "INFO",
-        "fields": {
-            "message": "requesting entity from: entity_address=http://entity_microservice:8081/entity/test"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 93,
-        "span": {
-            "id": "04020501050F",
-            "name": "get_property"
-        },
-        "spans": [
-            {
-                "id": "04020501050F",
-                "name": "get_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:01:05.243248Z",
-        "level": "INFO",
-        "fields": {
-            "message": "req: name=test"
-        },
-        "target": "entity_microservice::biz_router",
-        "filename": "entity_microservice/biz_router.rs",
-        "line_number": 32,
-        "span": {
-            "id": "07010F0B0302",
-            "name": "get_property"
-        },
-        "spans": [
-            {
-                "id": "07010F0B0302",
-                "name": "get_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:01:05.243337Z",
-        "level": "ERROR",
-        "fields": {
-            "message": "resp: status=404 Not Found"
-        },
-        "target": "entity_microservice::biz_router",
-        "filename": "entity_microservice/biz_router.rs",
-        "line_number": 40,
-        "span": {
-            "id": "07010F0B0302",
-            "name": "get_property"
-        },
-        "spans": [
-            {
-                "id": "07010F0B0302",
-                "name": "get_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:01:05.243627Z",
-        "level": "INFO",
-        "fields": {
-            "message": "entity_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"entity_microservice\")), port: Some(8081), path: \"/entity/test\", query: None, fragment: None }, status: 404, headers: {\"content-length\": \"0\", \"date\": \"Wed, 06 Dec 2023 10:01:05 GMT\"} }"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 103
-    },
-    {
-        "timestamp": "2023-12-06T10:01:05.243693Z",
-        "level": "ERROR",
-        "fields": {
-            "message": "error decoding response body: EOF while parsing a value at line 1 column 0"
-        },
-        "target": "shared::result",
-        "filename": "shared/result.rs",
-        "line_number": 36
-    },
-    {
-        "timestamp": "2023-12-06T10:01:16.703217Z",
-        "level": "INFO",
-        "fields": {
-            "message": "req: name=test"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 86,
-        "span": {
-            "id": "05080B07020C",
-            "name": "get_property"
-        },
-        "spans": [
-            {
-                "id": "05080B07020C",
-                "name": "get_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:01:16.703319Z",
-        "level": "INFO",
-        "fields": {
-            "message": "got service_key=ENTITY_PORT"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 38,
-        "span": {
-            "id": "05080B07020C",
-            "name": "get_property"
-        },
-        "spans": [
-            {
-                "id": "05080B07020C",
-                "name": "get_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:01:16.703357Z",
-        "level": "INFO",
-        "fields": {
-            "message": "got service=entity, port=8081"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 42,
-        "span": {
-            "id": "05080B07020C",
-            "name": "get_property"
-        },
-        "spans": [
-            {
-                "id": "05080B07020C",
-                "name": "get_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:01:16.703395Z",
-        "level": "INFO",
-        "fields": {
-            "message": "got service_key=ENTITY_ADDRESS"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 60,
-        "span": {
-            "id": "05080B07020C",
-            "name": "get_property"
-        },
-        "spans": [
-            {
-                "id": "05080B07020C",
-                "name": "get_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:01:16.703428Z",
-        "level": "INFO",
-        "fields": {
-            "message": "got service=entity, address=entity_microservice"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 64,
-        "span": {
-            "id": "05080B07020C",
-            "name": "get_property"
-        },
-        "spans": [
-            {
-                "id": "05080B07020C",
-                "name": "get_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:01:16.703482Z",
-        "level": "INFO",
-        "fields": {
-            "message": "requesting entity from: entity_address=http://entity_microservice:8081/entity/test"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 93,
-        "span": {
-            "id": "05080B07020C",
-            "name": "get_property"
-        },
-        "spans": [
-            {
-                "id": "05080B07020C",
-                "name": "get_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:01:16.703837Z",
-        "level": "INFO",
-        "fields": {
-            "message": "req: name=test"
-        },
-        "target": "entity_microservice::biz_router",
-        "filename": "entity_microservice/biz_router.rs",
-        "line_number": 32,
-        "span": {
-            "id": "0A020004010F",
-            "name": "get_property"
-        },
-        "spans": [
-            {
-                "id": "0A020004010F",
-                "name": "get_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:01:16.703865Z",
-        "level": "ERROR",
-        "fields": {
-            "message": "resp: status=404 Not Found"
-        },
-        "target": "entity_microservice::biz_router",
-        "filename": "entity_microservice/biz_router.rs",
-        "line_number": 40,
-        "span": {
-            "id": "0A020004010F",
-            "name": "get_property"
-        },
-        "spans": [
-            {
-                "id": "0A020004010F",
-                "name": "get_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:01:16.704112Z",
-        "level": "INFO",
-        "fields": {
-            "message": "entity_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"entity_microservice\")), port: Some(8081), path: \"/entity/test\", query: None, fragment: None }, status: 404, headers: {\"content-length\": \"0\", \"date\": \"Wed, 06 Dec 2023 10:01:16 GMT\"} }"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 103
-    },
-    {
-        "timestamp": "2023-12-06T10:01:16.704205Z",
-        "level": "ERROR",
-        "fields": {
-            "message": "error decoding response body: EOF while parsing a value at line 1 column 0"
-        },
-        "target": "shared::result",
-        "filename": "shared/result.rs",
-        "line_number": 36
-    },
-    {
-        "timestamp": "2023-12-06T10:02:36.733571Z",
-        "level": "INFO",
-        "fields": {
-            "message": "req: payload=MaybeCombo { origin: \"AU\", colour: \"blue\", property: Some(\"Some Property\"), value: Some(\"high\") }"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 151,
-        "span": {
-            "id": "0C020107060F",
-            "name": "post_property"
-        },
-        "spans": [
-            {
-                "id": "05080B07020C",
-                "name": "get_property"
-            },
-            {
-                "id": "0C020107060F",
-                "name": "post_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:02:36.733851Z",
-        "level": "INFO",
-        "fields": {
-            "message": "got service_key=ENTITY_PORT"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 38,
-        "span": {
-            "id": "0C020107060F",
-            "name": "post_property"
-        },
-        "spans": [
-            {
-                "id": "05080B07020C",
-                "name": "get_property"
-            },
-            {
-                "id": "0C020107060F",
-                "name": "post_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:02:36.733889Z",
-        "level": "INFO",
-        "fields": {
-            "message": "got service=entity, port=8081"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 42,
-        "span": {
-            "id": "0C020107060F",
-            "name": "post_property"
-        },
-        "spans": [
-            {
-                "id": "05080B07020C",
-                "name": "get_property"
-            },
-            {
-                "id": "0C020107060F",
-                "name": "post_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:02:36.733915Z",
-        "level": "INFO",
-        "fields": {
-            "message": "got service_key=ENTITY_ADDRESS"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 60,
-        "span": {
-            "id": "0C020107060F",
-            "name": "post_property"
-        },
-        "spans": [
-            {
-                "id": "05080B07020C",
-                "name": "get_property"
-            },
-            {
-                "id": "0C020107060F",
-                "name": "post_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:02:36.733935Z",
-        "level": "INFO",
-        "fields": {
-            "message": "got service=entity, address=entity_microservice"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 64,
-        "span": {
-            "id": "0C020107060F",
-            "name": "post_property"
-        },
-        "spans": [
-            {
-                "id": "05080B07020C",
-                "name": "get_property"
-            },
-            {
-                "id": "0C020107060F",
-                "name": "post_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:02:36.734159Z",
-        "level": "INFO",
-        "fields": {
-            "message": "got service_key=PROPERTY_PORT"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 38,
-        "span": {
-            "id": "0C020107060F",
-            "name": "post_property"
-        },
-        "spans": [
-            {
-                "id": "05080B07020C",
-                "name": "get_property"
-            },
-            {
-                "id": "0C020107060F",
-                "name": "post_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:02:36.734185Z",
-        "level": "INFO",
-        "fields": {
-            "message": "got service=property, port=8082"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 42,
-        "span": {
-            "id": "0C020107060F",
-            "name": "post_property"
-        },
-        "spans": [
-            {
-                "id": "05080B07020C",
-                "name": "get_property"
-            },
-            {
-                "id": "0C020107060F",
-                "name": "post_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:02:36.734219Z",
-        "level": "INFO",
-        "fields": {
-            "message": "got service_key=PROPERTY_ADDRESS"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 60,
-        "span": {
-            "id": "0C020107060F",
-            "name": "post_property"
-        },
-        "spans": [
-            {
-                "id": "05080B07020C",
-                "name": "get_property"
-            },
-            {
-                "id": "0C020107060F",
-                "name": "post_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:02:36.734262Z",
-        "level": "INFO",
-        "fields": {
-            "message": "got service=property, address=property_microservice"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 64,
-        "span": {
-            "id": "0C020107060F",
-            "name": "post_property"
-        },
-        "spans": [
-            {
-                "id": "05080B07020C",
-                "name": "get_property"
-            },
-            {
-                "id": "0C020107060F",
-                "name": "post_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:02:36.734308Z",
-        "level": "INFO",
-        "fields": {
-            "message": "sending entity post to: entity_address=http://entity_microservice:8081/entity/test"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 182,
-        "span": {
-            "id": "0C020107060F",
-            "name": "post_property"
-        },
-        "spans": [
-            {
-                "id": "05080B07020C",
-                "name": "get_property"
-            },
-            {
-                "id": "0C020107060F",
-                "name": "post_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:02:36.735340Z",
-        "level": "INFO",
-        "fields": {
-            "message": "entity_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"entity_microservice\")), port: Some(8081), path: \"/entity/test\", query: None, fragment: None }, status: 415, headers: {\"content-type\": \"text/plain; charset=utf-8\", \"content-length\": \"54\", \"date\": \"Wed, 06 Dec 2023 10:02:36 GMT\"} }"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 193
-    },
-    {
-        "timestamp": "2023-12-06T10:02:36.735451Z",
-        "level": "INFO",
-        "fields": {
-            "message": "sending property post to: property_address=http://property_microservice:8082/property/test"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 195
-    },
-    {
-        "timestamp": "2023-12-06T10:02:36.737835Z",
-        "level": "INFO",
-        "fields": {
-            "message": "property_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"property_microservice\")), port: Some(8082), path: \"/property/test\", query: None, fragment: None }, status: 415, headers: {\"content-type\": \"text/plain; charset=utf-8\", \"content-length\": \"54\", \"date\": \"Wed, 06 Dec 2023 10:02:36 GMT\"} }"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 206
-    },
-    {
-        "timestamp": "2023-12-06T10:02:46.315314Z",
-        "level": "INFO",
-        "fields": {
-            "message": "req: name=test"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 86,
-        "span": {
-            "id": "03010C0A0608",
-            "name": "get_property"
-        },
-        "spans": [
-            {
-                "id": "03010C0A0608",
-                "name": "get_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:02:46.315385Z",
-        "level": "INFO",
-        "fields": {
-            "message": "got service_key=ENTITY_PORT"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 38,
-        "span": {
-            "id": "03010C0A0608",
-            "name": "get_property"
-        },
-        "spans": [
-            {
-                "id": "03010C0A0608",
-                "name": "get_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:02:46.315405Z",
-        "level": "INFO",
-        "fields": {
-            "message": "got service=entity, port=8081"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 42,
-        "span": {
-            "id": "03010C0A0608",
-            "name": "get_property"
-        },
-        "spans": [
-            {
-                "id": "03010C0A0608",
-                "name": "get_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:02:46.315425Z",
-        "level": "INFO",
-        "fields": {
-            "message": "got service_key=ENTITY_ADDRESS"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 60,
-        "span": {
-            "id": "03010C0A0608",
-            "name": "get_property"
-        },
-        "spans": [
-            {
-                "id": "03010C0A0608",
-                "name": "get_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:02:46.315442Z",
-        "level": "INFO",
-        "fields": {
-            "message": "got service=entity, address=entity_microservice"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 64,
-        "span": {
-            "id": "03010C0A0608",
-            "name": "get_property"
-        },
-        "spans": [
-            {
-                "id": "03010C0A0608",
-                "name": "get_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:02:46.315460Z",
-        "level": "INFO",
-        "fields": {
-            "message": "requesting entity from: entity_address=http://entity_microservice:8081/entity/test"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 93,
-        "span": {
-            "id": "03010C0A0608",
-            "name": "get_property"
-        },
-        "spans": [
-            {
-                "id": "03010C0A0608",
-                "name": "get_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:02:46.315782Z",
-        "level": "INFO",
-        "fields": {
-            "message": "req: name=test"
-        },
-        "target": "entity_microservice::biz_router",
-        "filename": "entity_microservice/biz_router.rs",
-        "line_number": 32,
-        "span": {
-            "id": "040B0C090405",
-            "name": "get_property"
-        },
-        "spans": [
-            {
-                "id": "040B0C090405",
-                "name": "get_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:02:46.315810Z",
-        "level": "ERROR",
-        "fields": {
-            "message": "resp: status=404 Not Found"
-        },
-        "target": "entity_microservice::biz_router",
-        "filename": "entity_microservice/biz_router.rs",
-        "line_number": 40,
-        "span": {
-            "id": "040B0C090405",
-            "name": "get_property"
-        },
-        "spans": [
-            {
-                "id": "040B0C090405",
-                "name": "get_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:02:46.315992Z",
-        "level": "INFO",
-        "fields": {
-            "message": "entity_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"entity_microservice\")), port: Some(8081), path: \"/entity/test\", query: None, fragment: None }, status: 404, headers: {\"content-length\": \"0\", \"date\": \"Wed, 06 Dec 2023 10:02:46 GMT\"} }"
-        },
-        "target": "combo_service::biz_router",
-        "filename": "combo_service/biz_router.rs",
-        "line_number": 103,
-        "span": {
-            "id": "0C020107060F",
-            "name": "post_property"
-        },
-        "spans": [
-            {
-                "id": "05080B07020C",
-                "name": "get_property"
-            },
-            {
-                "id": "0C020107060F",
-                "name": "post_property"
-            }
-        ]
-    },
-    {
-        "timestamp": "2023-12-06T10:02:46.316125Z",
-        "level": "ERROR",
-        "fields": {
-            "message": "error decoding response body: EOF while parsing a value at line 1 column 0"
-        },
-        "target": "shared::result",
-        "filename": "shared/result.rs",
-        "line_number": 36,
-        "span": {
-            "id": "0C020107060F",
-            "name": "post_property"
-        },
-        "spans": [
-            {
-                "id": "05080B07020C",
-                "name": "get_property"
-            },
-            {
-                "id": "0C020107060F",
-                "name": "post_property"
-            }
-        ]
-    }
-]
+{"timestamp":"2023-12-07T01:09:03.839327Z","level":"INFO","message":"Starting combo_service","target":"combo_service","filename":"combo_service/main.rs","line_number":15}
+{"timestamp":"2023-12-07T01:09:03.839415Z","level":"INFO","message":"Creating client pool","target":"combo_service","filename":"combo_service/main.rs","line_number":17}
+{"timestamp":"2023-12-07T01:09:03.855820Z","level":"INFO","message":"Creating routers","target":"combo_service","filename":"combo_service/main.rs","line_number":25}
+{"timestamp":"2023-12-07T01:09:03.856090Z","level":"INFO","message":"Creating listener","target":"combo_service","filename":"combo_service/main.rs","line_number":32}
+{"timestamp":"2023-12-07T01:09:03.856193Z","level":"INFO","message":"Starting server","target":"combo_service","filename":"combo_service/main.rs","line_number":36}
+{"timestamp":"2023-12-07T01:09:03.630476Z","level":"INFO","message":"Starting microservice","target":"shared::init","filename":"shared/init.rs","line_number":31}
+{"timestamp":"2023-12-07T01:09:03.630515Z","level":"INFO","message":"Creating app_state","target":"shared::init","filename":"shared/init.rs","line_number":33}
+{"timestamp":"2023-12-07T01:09:03.630524Z","level":"INFO","message":"Creating routers","target":"shared::init","filename":"shared/init.rs","line_number":37}
+{"timestamp":"2023-12-07T01:09:03.630547Z","level":"INFO","message":"Creating listener","target":"shared::init","filename":"shared/init.rs","line_number":44}
+{"timestamp":"2023-12-07T01:09:03.630592Z","level":"INFO","message":"Starting server","target":"shared::init","filename":"shared/init.rs","line_number":51}
+{"timestamp":"2023-12-07T01:09:03.777161Z","level":"INFO","message":"Starting microservice","target":"shared::init","filename":"shared/init.rs","line_number":31}
+{"timestamp":"2023-12-07T01:09:03.777186Z","level":"INFO","message":"Creating app_state","target":"shared::init","filename":"shared/init.rs","line_number":33}
+{"timestamp":"2023-12-07T01:09:03.777194Z","level":"INFO","message":"Creating routers","target":"shared::init","filename":"shared/init.rs","line_number":37}
+{"timestamp":"2023-12-07T01:09:03.777213Z","level":"INFO","message":"Creating listener","target":"shared::init","filename":"shared/init.rs","line_number":44}
+{"timestamp":"2023-12-07T01:09:03.777266Z","level":"INFO","message":"Starting server","target":"shared::init","filename":"shared/init.rs","line_number":51}
+{"timestamp":"2023-12-07T01:09:34.969170Z","level":"INFO","message":"req: name=combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":98,"span":{"id":"05080B0F0D07","name":"get_property"},"spans":[{"id":"05080B0F0D07","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:09:34.969429Z","level":"INFO","message":"got service_key=ENTITY_PORT","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":37,"span":{"id":"05080B0F0D07","name":"get_property"},"spans":[{"id":"05080B0F0D07","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:09:34.969451Z","level":"INFO","message":"got service=entity, port=8081","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":41,"span":{"id":"05080B0F0D07","name":"get_property"},"spans":[{"id":"05080B0F0D07","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:09:34.969472Z","level":"INFO","message":"got service_key=ENTITY_ADDRESS","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":59,"span":{"id":"05080B0F0D07","name":"get_property"},"spans":[{"id":"05080B0F0D07","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:09:34.969489Z","level":"INFO","message":"got service=entity, address=entity_microservice","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":63,"span":{"id":"05080B0F0D07","name":"get_property"},"spans":[{"id":"05080B0F0D07","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:09:34.969509Z","level":"INFO","message":"got service_key=PROPERTY_PORT","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":37,"span":{"id":"05080B0F0D07","name":"get_property"},"spans":[{"id":"05080B0F0D07","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:09:34.969524Z","level":"INFO","message":"got service=property, port=8082","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":41,"span":{"id":"05080B0F0D07","name":"get_property"},"spans":[{"id":"05080B0F0D07","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:09:34.969541Z","level":"INFO","message":"got service_key=PROPERTY_ADDRESS","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":59,"span":{"id":"05080B0F0D07","name":"get_property"},"spans":[{"id":"05080B0F0D07","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:09:34.969557Z","level":"INFO","message":"got service=property, address=property_microservice","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":63,"span":{"id":"05080B0F0D07","name":"get_property"},"spans":[{"id":"05080B0F0D07","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:09:34.969574Z","level":"INFO","message":"requesting entity from: entity_address=http://entity_microservice:8081/entity/combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":105,"span":{"id":"05080B0F0D07","name":"get_property"},"spans":[{"id":"05080B0F0D07","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:09:34.971719Z","level":"INFO","message":"req: name=combo_test","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":36,"span":{"id":"05080B0F0D07","name":"get_property"},"spans":[{"id":"05080B0F0D07","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:09:34.971762Z","level":"ERROR","message":"resp: status=404 Not Found","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":44,"span":{"id":"05080B0F0D07","name":"get_property"},"spans":[{"id":"05080B0F0D07","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:09:34.972023Z","level":"INFO","message":"entity_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"entity_microservice\")), port: Some(8081), path: \"/entity/combo_test\", query: None, fragment: None }, status: 404, headers: {\"content-length\": \"0\", \"date\": \"Thu, 07 Dec 2023 01:09:34 GMT\"} }","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":115}
+{"timestamp":"2023-12-07T01:12:15.423134Z","level":"INFO","message":"req: name=property_test","target":"property_microservice::biz_router","filename":"property_microservice/biz_router.rs","line_number":34,"span":{"id":"000F0B020408","name":"get_property"},"spans":[{"id":"000F0B020408","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:12:15.423203Z","level":"ERROR","message":"resp: status=404 Not Found","target":"property_microservice::biz_router","filename":"property_microservice/biz_router.rs","line_number":42,"span":{"id":"000F0B020408","name":"get_property"},"spans":[{"id":"000F0B020408","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:12:19.724124Z","level":"INFO","message":"req: name=property_test","target":"property_microservice::biz_router","filename":"property_microservice/biz_router.rs","line_number":34,"span":{"id":"0306020E0008","name":"get_property"},"spans":[{"id":"0306020E0008","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:12:19.724161Z","level":"ERROR","message":"resp: status=404 Not Found","target":"property_microservice::biz_router","filename":"property_microservice/biz_router.rs","line_number":42,"span":{"id":"0306020E0008","name":"get_property"},"spans":[{"id":"0306020E0008","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:12:25.129348Z","level":"INFO","message":"req: payload=PartialProperty { property: Some(\"Some Property\"), value: Some(\"low\") }","target":"property_microservice::biz_router","filename":"property_microservice/biz_router.rs","line_number":75,"span":{"id":"01010F03020A","name":"patch_property"},"spans":[{"id":"01010F03020A","name":"patch_property"}]}
+{"timestamp":"2023-12-07T01:12:25.129419Z","level":"ERROR","message":"resp: status=404 Not Found","target":"property_microservice::biz_router","filename":"property_microservice/biz_router.rs","line_number":84,"span":{"id":"01010F03020A","name":"patch_property"},"spans":[{"id":"01010F03020A","name":"patch_property"}]}
+{"timestamp":"2023-12-07T01:12:29.342927Z","level":"INFO","message":"req: payload=Property { property: \"Some Property\", value: \"high\" }","target":"property_microservice::biz_router","filename":"property_microservice/biz_router.rs","line_number":58,"span":{"id":"0F090F080E0C","name":"post_property"},"spans":[{"id":"0F090F080E0C","name":"post_property"}]}
+{"timestamp":"2023-12-07T01:12:32.160889Z","level":"INFO","message":"req: name=property_test","target":"property_microservice::biz_router","filename":"property_microservice/biz_router.rs","line_number":99,"span":{"id":"06070A040D09","name":"delete_property"},"spans":[{"id":"06070A040D09","name":"delete_property"}]}
+{"timestamp":"2023-12-07T01:12:32.160942Z","level":"INFO","message":"Removed item: property_test:property=Some Property, value=high","target":"shared::state","filename":"shared/state/mod.rs","line_number":61,"span":{"id":"06070A040D09","name":"delete_property"},"spans":[{"id":"06070A040D09","name":"delete_property"}]}
+{"timestamp":"2023-12-07T01:12:35.289957Z","level":"INFO","message":"req: name=property_test","target":"property_microservice::biz_router","filename":"property_microservice/biz_router.rs","line_number":34,"span":{"id":"0F0102030906","name":"get_property"},"spans":[{"id":"0F0102030906","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:12:35.289990Z","level":"ERROR","message":"resp: status=404 Not Found","target":"property_microservice::biz_router","filename":"property_microservice/biz_router.rs","line_number":42,"span":{"id":"0F0102030906","name":"get_property"},"spans":[{"id":"0F0102030906","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:12:39.574298Z","level":"INFO","message":"req: name=entity_test","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":36,"span":{"id":"060D06040F0F","name":"get_property"},"spans":[{"id":"060D06040F0F","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:12:39.574528Z","level":"ERROR","message":"resp: status=404 Not Found","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":44,"span":{"id":"060D06040F0F","name":"get_property"},"spans":[{"id":"060D06040F0F","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:12:42.342128Z","level":"INFO","message":"req: payload=Entity { origin: \"US\", colour: \"yellow\" }","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":62,"span":{"id":"060D07060405","name":"post_property"},"spans":[{"id":"060D07060405","name":"post_property"}]}
+{"timestamp":"2023-12-07T01:12:44.731174Z","level":"INFO","message":"req: name=entity_test","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":36,"span":{"id":"050F00060A0B","name":"get_property"},"spans":[{"id":"050F00060A0B","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:12:44.731215Z","level":"INFO","message":"resp: value=origin=US, colour=yellow","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":40,"span":{"id":"050F00060A0B","name":"get_property"},"spans":[{"id":"050F00060A0B","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:12:47.653417Z","level":"INFO","message":"req: payload=PartialEntity { origin: Some(\"US\"), colour: Some(\"green\") }","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":80,"span":{"id":"04060E0D0108","name":"patch_property"},"spans":[{"id":"04060E0D0108","name":"patch_property"}]}
+{"timestamp":"2023-12-07T01:12:50.949777Z","level":"INFO","message":"req: name=entity_test","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":36,"span":{"id":"0F0208090E03","name":"get_property"},"spans":[{"id":"0F0208090E03","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:12:50.949856Z","level":"INFO","message":"resp: value=origin=US, colour=green","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":40,"span":{"id":"0F0208090E03","name":"get_property"},"spans":[{"id":"0F0208090E03","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:12:53.981901Z","level":"INFO","message":"req: name=entity_test","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":105,"span":{"id":"0F0B0E0B0C09","name":"delete_property"},"spans":[{"id":"0F0B0E0B0C09","name":"delete_property"}]}
+{"timestamp":"2023-12-07T01:12:53.981999Z","level":"INFO","message":"Removed item: entity_test:origin=US, colour=green","target":"shared::state","filename":"shared/state/mod.rs","line_number":61,"span":{"id":"0F0B0E0B0C09","name":"delete_property"},"spans":[{"id":"0F0B0E0B0C09","name":"delete_property"}]}
+{"timestamp":"2023-12-07T01:12:59.798857Z","level":"INFO","message":"req: name=combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":98,"span":{"id":"050D0607080B","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:12:59.798977Z","level":"INFO","message":"got service_key=ENTITY_PORT","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":37,"span":{"id":"050D0607080B","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:12:59.799022Z","level":"INFO","message":"got service=entity, port=8081","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":41,"span":{"id":"050D0607080B","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:12:59.799068Z","level":"INFO","message":"got service_key=ENTITY_ADDRESS","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":59,"span":{"id":"050D0607080B","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:12:59.799108Z","level":"INFO","message":"got service=entity, address=entity_microservice","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":63,"span":{"id":"050D0607080B","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:12:59.799153Z","level":"INFO","message":"got service_key=PROPERTY_PORT","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":37,"span":{"id":"050D0607080B","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:12:59.799194Z","level":"INFO","message":"got service=property, port=8082","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":41,"span":{"id":"050D0607080B","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:12:59.799234Z","level":"INFO","message":"got service_key=PROPERTY_ADDRESS","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":59,"span":{"id":"050D0607080B","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:12:59.799272Z","level":"INFO","message":"got service=property, address=property_microservice","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":63,"span":{"id":"050D0607080B","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:12:59.799314Z","level":"INFO","message":"requesting entity from: entity_address=http://entity_microservice:8081/entity/combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":105,"span":{"id":"050D0607080B","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:12:59.800606Z","level":"INFO","message":"req: name=combo_test","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":36,"span":{"id":"050D0607080B","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:12:59.800639Z","level":"ERROR","message":"resp: status=404 Not Found","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":44,"span":{"id":"050D0607080B","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:12:59.800815Z","level":"INFO","message":"entity_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"entity_microservice\")), port: Some(8081), path: \"/entity/combo_test\", query: None, fragment: None }, status: 404, headers: {\"content-length\": \"0\", \"date\": \"Thu, 07 Dec 2023 01:12:59 GMT\"} }","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":115}
+{"timestamp":"2023-12-07T01:13:03.331657Z","level":"INFO","message":"req: payload=MaybeCombo { origin: \"AU\", colour: \"blue\", property: Some(\"Some Property\"), value: Some(\"high\") }","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":182,"span":{"id":"030705040806","name":"post_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"}]}
+{"timestamp":"2023-12-07T01:13:03.331879Z","level":"INFO","message":"got service_key=ENTITY_PORT","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":37,"span":{"id":"030705040806","name":"post_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"}]}
+{"timestamp":"2023-12-07T01:13:03.331912Z","level":"INFO","message":"got service=entity, port=8081","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":41,"span":{"id":"030705040806","name":"post_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"}]}
+{"timestamp":"2023-12-07T01:13:03.331935Z","level":"INFO","message":"got service_key=ENTITY_ADDRESS","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":59,"span":{"id":"030705040806","name":"post_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"}]}
+{"timestamp":"2023-12-07T01:13:03.331954Z","level":"INFO","message":"got service=entity, address=entity_microservice","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":63,"span":{"id":"030705040806","name":"post_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"}]}
+{"timestamp":"2023-12-07T01:13:03.331976Z","level":"INFO","message":"got service_key=PROPERTY_PORT","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":37,"span":{"id":"030705040806","name":"post_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"}]}
+{"timestamp":"2023-12-07T01:13:03.331994Z","level":"INFO","message":"got service=property, port=8082","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":41,"span":{"id":"030705040806","name":"post_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"}]}
+{"timestamp":"2023-12-07T01:13:03.332012Z","level":"INFO","message":"got service_key=PROPERTY_ADDRESS","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":59,"span":{"id":"030705040806","name":"post_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"}]}
+{"timestamp":"2023-12-07T01:13:03.332030Z","level":"INFO","message":"got service=property, address=property_microservice","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":63,"span":{"id":"030705040806","name":"post_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"}]}
+{"timestamp":"2023-12-07T01:13:03.332061Z","level":"INFO","message":"sending entity post to: entity_address=http://entity_microservice:8081/entity/combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":218,"span":{"id":"030705040806","name":"post_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"}]}
+{"timestamp":"2023-12-07T01:13:03.332642Z","level":"INFO","message":"req: payload=Entity { origin: \"AU\", colour: \"blue\" }","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":62,"span":{"id":"030705040806","name":"post_property"},"spans":[{"id":"030705040806","name":"post_property"}]}
+{"timestamp":"2023-12-07T01:13:03.333074Z","level":"INFO","message":"entity_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"entity_microservice\")), port: Some(8081), path: \"/entity/combo_test\", query: None, fragment: None }, status: 201, headers: {\"content-length\": \"0\", \"date\": \"Thu, 07 Dec 2023 01:13:03 GMT\"} }","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":240}
+{"timestamp":"2023-12-07T01:13:03.333130Z","level":"INFO","message":"sending property post to: property_address=http://property_microservice:8082/property/combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":242}
+{"timestamp":"2023-12-07T01:13:03.334303Z","level":"INFO","message":"req: payload=Property { property: \"Some Property\", value: \"high\" }","target":"property_microservice::biz_router","filename":"property_microservice/biz_router.rs","line_number":58,"span":{"id":"030705040806","name":"post_property"},"spans":[{"id":"030705040806","name":"post_property"}]}
+{"timestamp":"2023-12-07T01:13:03.334465Z","level":"INFO","message":"property_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"property_microservice\")), port: Some(8082), path: \"/property/combo_test\", query: None, fragment: None }, status: 201, headers: {\"content-length\": \"0\", \"date\": \"Thu, 07 Dec 2023 01:13:03 GMT\"} }","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":262}
+{"timestamp":"2023-12-07T01:13:05.889441Z","level":"INFO","message":"req: name=combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":98,"span":{"id":"04040E05090A","name":"get_property"},"spans":[{"id":"04040E05090A","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:05.889559Z","level":"INFO","message":"got service_key=ENTITY_PORT","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":37,"span":{"id":"04040E05090A","name":"get_property"},"spans":[{"id":"04040E05090A","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:05.889604Z","level":"INFO","message":"got service=entity, port=8081","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":41,"span":{"id":"04040E05090A","name":"get_property"},"spans":[{"id":"04040E05090A","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:05.889650Z","level":"INFO","message":"got service_key=ENTITY_ADDRESS","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":59,"span":{"id":"04040E05090A","name":"get_property"},"spans":[{"id":"04040E05090A","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:05.889690Z","level":"INFO","message":"got service=entity, address=entity_microservice","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":63,"span":{"id":"04040E05090A","name":"get_property"},"spans":[{"id":"04040E05090A","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:05.889735Z","level":"INFO","message":"got service_key=PROPERTY_PORT","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":37,"span":{"id":"04040E05090A","name":"get_property"},"spans":[{"id":"04040E05090A","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:05.889775Z","level":"INFO","message":"got service=property, port=8082","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":41,"span":{"id":"04040E05090A","name":"get_property"},"spans":[{"id":"04040E05090A","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:05.889850Z","level":"INFO","message":"got service_key=PROPERTY_ADDRESS","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":59,"span":{"id":"04040E05090A","name":"get_property"},"spans":[{"id":"04040E05090A","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:05.889894Z","level":"INFO","message":"got service=property, address=property_microservice","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":63,"span":{"id":"04040E05090A","name":"get_property"},"spans":[{"id":"04040E05090A","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:05.889944Z","level":"INFO","message":"requesting entity from: entity_address=http://entity_microservice:8081/entity/combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":105,"span":{"id":"04040E05090A","name":"get_property"},"spans":[{"id":"04040E05090A","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:05.890339Z","level":"INFO","message":"req: name=combo_test","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":36,"span":{"id":"04040E05090A","name":"get_property"},"spans":[{"id":"04040E05090A","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:05.890364Z","level":"INFO","message":"resp: value=origin=AU, colour=blue","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":40,"span":{"id":"04040E05090A","name":"get_property"},"spans":[{"id":"04040E05090A","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:05.890574Z","level":"INFO","message":"entity_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"entity_microservice\")), port: Some(8081), path: \"/entity/combo_test\", query: None, fragment: None }, status: 200, headers: {\"content-type\": \"application/json\", \"content-length\": \"31\", \"date\": \"Thu, 07 Dec 2023 01:13:05 GMT\"} }","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":115}
+{"timestamp":"2023-12-07T01:13:05.890682Z","level":"INFO","message":"requesting property from: property_address=http://property_microservice:8082/property/combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":132}
+{"timestamp":"2023-12-07T01:13:05.890962Z","level":"INFO","message":"req: name=combo_test","target":"property_microservice::biz_router","filename":"property_microservice/biz_router.rs","line_number":34,"span":{"id":"04040E05090A","name":"get_property"},"spans":[{"id":"04040E05090A","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:05.890987Z","level":"INFO","message":"resp: value=property=Some Property, value=high","target":"property_microservice::biz_router","filename":"property_microservice/biz_router.rs","line_number":38,"span":{"id":"04040E05090A","name":"get_property"},"spans":[{"id":"04040E05090A","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:05.891139Z","level":"INFO","message":"property_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"property_microservice\")), port: Some(8082), path: \"/property/combo_test\", query: None, fragment: None }, status: 200, headers: {\"content-type\": \"application/json\", \"content-length\": \"43\", \"date\": \"Thu, 07 Dec 2023 01:13:05 GMT\"} }","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":150,"span":{"id":"04040E05090A","name":"get_property"},"spans":[{"id":"04040E05090A","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:11.526354Z","level":"INFO","message":"req: payload=PartialCombo { origin: None, colour: Some(\"red\"), property: None, value: Some(\"low\") }","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":282,"span":{"id":"050408050607","name":"patch_property"},"spans":[{"id":"050408050607","name":"patch_property"}]}
+{"timestamp":"2023-12-07T01:13:11.526524Z","level":"INFO","message":"got service_key=ENTITY_PORT","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":37,"span":{"id":"050408050607","name":"patch_property"},"spans":[{"id":"050408050607","name":"patch_property"}]}
+{"timestamp":"2023-12-07T01:13:11.526574Z","level":"INFO","message":"got service=entity, port=8081","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":41,"span":{"id":"050408050607","name":"patch_property"},"spans":[{"id":"050408050607","name":"patch_property"}]}
+{"timestamp":"2023-12-07T01:13:11.526621Z","level":"INFO","message":"got service_key=ENTITY_ADDRESS","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":59,"span":{"id":"050408050607","name":"patch_property"},"spans":[{"id":"050408050607","name":"patch_property"}]}
+{"timestamp":"2023-12-07T01:13:11.526663Z","level":"INFO","message":"got service=entity, address=entity_microservice","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":63,"span":{"id":"050408050607","name":"patch_property"},"spans":[{"id":"050408050607","name":"patch_property"}]}
+{"timestamp":"2023-12-07T01:13:11.526709Z","level":"INFO","message":"got service_key=PROPERTY_PORT","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":37,"span":{"id":"050408050607","name":"patch_property"},"spans":[{"id":"050408050607","name":"patch_property"}]}
+{"timestamp":"2023-12-07T01:13:11.526750Z","level":"INFO","message":"got service=property, port=8082","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":41,"span":{"id":"050408050607","name":"patch_property"},"spans":[{"id":"050408050607","name":"patch_property"}]}
+{"timestamp":"2023-12-07T01:13:11.526790Z","level":"INFO","message":"got service_key=PROPERTY_ADDRESS","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":59,"span":{"id":"050408050607","name":"patch_property"},"spans":[{"id":"050408050607","name":"patch_property"}]}
+{"timestamp":"2023-12-07T01:13:11.526845Z","level":"INFO","message":"got service=property, address=property_microservice","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":63,"span":{"id":"050408050607","name":"patch_property"},"spans":[{"id":"050408050607","name":"patch_property"}]}
+{"timestamp":"2023-12-07T01:13:11.526889Z","level":"INFO","message":"requesting entity from: entity_address=http://entity_microservice:8081/entity/combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":292,"span":{"id":"050408050607","name":"patch_property"},"spans":[{"id":"050408050607","name":"patch_property"}]}
+{"timestamp":"2023-12-07T01:13:11.527541Z","level":"INFO","message":"req: name=combo_test","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":36,"span":{"id":"050408050607","name":"get_property"},"spans":[{"id":"050408050607","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:11.527592Z","level":"INFO","message":"resp: value=origin=AU, colour=blue","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":40,"span":{"id":"050408050607","name":"get_property"},"spans":[{"id":"050408050607","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:11.527990Z","level":"INFO","message":"entity_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"entity_microservice\")), port: Some(8081), path: \"/entity/combo_test\", query: None, fragment: None }, status: 200, headers: {\"content-type\": \"application/json\", \"content-length\": \"31\", \"date\": \"Thu, 07 Dec 2023 01:13:11 GMT\"} }","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":307,"span":{"id":"030705040806","name":"post_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"}]}
+{"timestamp":"2023-12-07T01:13:11.528187Z","level":"INFO","message":"requesting property from: property_address=http://property_microservice:8082/property/combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":317,"span":{"id":"030705040806","name":"post_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"}]}
+{"timestamp":"2023-12-07T01:13:11.528587Z","level":"INFO","message":"req: name=combo_test","target":"property_microservice::biz_router","filename":"property_microservice/biz_router.rs","line_number":34,"span":{"id":"050408050607","name":"get_property"},"spans":[{"id":"050408050607","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:11.528626Z","level":"INFO","message":"resp: value=property=Some Property, value=high","target":"property_microservice::biz_router","filename":"property_microservice/biz_router.rs","line_number":38,"span":{"id":"050408050607","name":"get_property"},"spans":[{"id":"050408050607","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:11.528786Z","level":"INFO","message":"property_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"property_microservice\")), port: Some(8082), path: \"/property/combo_test\", query: None, fragment: None }, status: 200, headers: {\"content-type\": \"application/json\", \"content-length\": \"43\", \"date\": \"Thu, 07 Dec 2023 01:13:11 GMT\"} }","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":335}
+{"timestamp":"2023-12-07T01:13:11.528858Z","level":"INFO","message":"existing_entity=Entity { origin: \"AU\", colour: \"blue\" }","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":345}
+{"timestamp":"2023-12-07T01:13:11.528882Z","level":"INFO","message":"sending entity patch to: entity_address=http://entity_microservice:8081/entity/combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":375}
+{"timestamp":"2023-12-07T01:13:11.529125Z","level":"INFO","message":"req: payload=Entity { origin: \"AU\", colour: \"red\" }","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":62,"span":{"id":"050408050607","name":"post_property"},"spans":[{"id":"050408050607","name":"post_property"}]}
+{"timestamp":"2023-12-07T01:13:11.529287Z","level":"INFO","message":"entity_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"entity_microservice\")), port: Some(8081), path: \"/entity/combo_test\", query: None, fragment: None }, status: 201, headers: {\"content-length\": \"0\", \"date\": \"Thu, 07 Dec 2023 01:13:11 GMT\"} }","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":392,"span":{"id":"030705040806","name":"post_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"}]}
+{"timestamp":"2023-12-07T01:13:11.529371Z","level":"INFO","message":"sending property patch to: property_address=http://property_microservice:8082/property/combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":394,"span":{"id":"030705040806","name":"post_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"}]}
+{"timestamp":"2023-12-07T01:13:11.529630Z","level":"INFO","message":"req: payload=Property { property: \"Some Property\", value: \"low\" }","target":"property_microservice::biz_router","filename":"property_microservice/biz_router.rs","line_number":58,"span":{"id":"050408050607","name":"post_property"},"spans":[{"id":"050408050607","name":"post_property"}]}
+{"timestamp":"2023-12-07T01:13:11.529760Z","level":"INFO","message":"property_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"property_microservice\")), port: Some(8082), path: \"/property/combo_test\", query: None, fragment: None }, status: 201, headers: {\"content-length\": \"0\", \"date\": \"Thu, 07 Dec 2023 01:13:11 GMT\"} }","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":414,"span":{"id":"030705040806","name":"post_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"}]}
+{"timestamp":"2023-12-07T01:13:15.954122Z","level":"INFO","message":"req: name=combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":98,"span":{"id":"0C0D07010905","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0C0D07010905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:15.954234Z","level":"INFO","message":"got service_key=ENTITY_PORT","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":37,"span":{"id":"0C0D07010905","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0C0D07010905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:15.954270Z","level":"INFO","message":"got service=entity, port=8081","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":41,"span":{"id":"0C0D07010905","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0C0D07010905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:15.954297Z","level":"INFO","message":"got service_key=ENTITY_ADDRESS","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":59,"span":{"id":"0C0D07010905","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0C0D07010905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:15.954319Z","level":"INFO","message":"got service=entity, address=entity_microservice","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":63,"span":{"id":"0C0D07010905","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0C0D07010905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:15.954343Z","level":"INFO","message":"got service_key=PROPERTY_PORT","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":37,"span":{"id":"0C0D07010905","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0C0D07010905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:15.954364Z","level":"INFO","message":"got service=property, port=8082","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":41,"span":{"id":"0C0D07010905","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0C0D07010905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:15.954389Z","level":"INFO","message":"got service_key=PROPERTY_ADDRESS","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":59,"span":{"id":"0C0D07010905","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0C0D07010905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:15.954410Z","level":"INFO","message":"got service=property, address=property_microservice","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":63,"span":{"id":"0C0D07010905","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0C0D07010905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:15.954432Z","level":"INFO","message":"requesting entity from: entity_address=http://entity_microservice:8081/entity/combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":105,"span":{"id":"0C0D07010905","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0C0D07010905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:15.954930Z","level":"INFO","message":"req: name=combo_test","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":36,"span":{"id":"0C0D07010905","name":"get_property"},"spans":[{"id":"0C0D07010905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:15.954975Z","level":"INFO","message":"resp: value=origin=AU, colour=red","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":40,"span":{"id":"0C0D07010905","name":"get_property"},"spans":[{"id":"0C0D07010905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:15.955337Z","level":"INFO","message":"entity_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"entity_microservice\")), port: Some(8081), path: \"/entity/combo_test\", query: None, fragment: None }, status: 200, headers: {\"content-type\": \"application/json\", \"content-length\": \"30\", \"date\": \"Thu, 07 Dec 2023 01:13:15 GMT\"} }","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":115,"span":{"id":"050408050607","name":"patch_property"},"spans":[{"id":"050408050607","name":"patch_property"}]}
+{"timestamp":"2023-12-07T01:13:15.955557Z","level":"INFO","message":"requesting property from: property_address=http://property_microservice:8082/property/combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":132,"span":{"id":"050408050607","name":"patch_property"},"spans":[{"id":"050408050607","name":"patch_property"}]}
+{"timestamp":"2023-12-07T01:13:15.956069Z","level":"INFO","message":"req: name=combo_test","target":"property_microservice::biz_router","filename":"property_microservice/biz_router.rs","line_number":34,"span":{"id":"0C0D07010905","name":"get_property"},"spans":[{"id":"0C0D07010905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:15.956123Z","level":"INFO","message":"resp: value=property=Some Property, value=low","target":"property_microservice::biz_router","filename":"property_microservice/biz_router.rs","line_number":38,"span":{"id":"0C0D07010905","name":"get_property"},"spans":[{"id":"0C0D07010905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:15.956343Z","level":"INFO","message":"property_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"property_microservice\")), port: Some(8082), path: \"/property/combo_test\", query: None, fragment: None }, status: 200, headers: {\"content-type\": \"application/json\", \"content-length\": \"42\", \"date\": \"Thu, 07 Dec 2023 01:13:15 GMT\"} }","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":150,"span":{"id":"0C0D07010905","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0C0D07010905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:22.524951Z","level":"INFO","message":"req: payload=PartialProperty { property: Some(\"Some Property\"), value: Some(\"med\") }","target":"property_microservice::biz_router","filename":"property_microservice/biz_router.rs","line_number":75,"span":{"id":"03000D020807","name":"patch_property"},"spans":[{"id":"03000D020807","name":"patch_property"}]}
+{"timestamp":"2023-12-07T01:13:25.543119Z","level":"INFO","message":"req: name=combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":98,"span":{"id":"040402070C05","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"040402070C05","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:25.543219Z","level":"INFO","message":"got service_key=ENTITY_PORT","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":37,"span":{"id":"040402070C05","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"040402070C05","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:25.543260Z","level":"INFO","message":"got service=entity, port=8081","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":41,"span":{"id":"040402070C05","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"040402070C05","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:25.543297Z","level":"INFO","message":"got service_key=ENTITY_ADDRESS","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":59,"span":{"id":"040402070C05","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"040402070C05","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:25.543334Z","level":"INFO","message":"got service=entity, address=entity_microservice","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":63,"span":{"id":"040402070C05","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"040402070C05","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:25.543387Z","level":"INFO","message":"got service_key=PROPERTY_PORT","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":37,"span":{"id":"040402070C05","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"040402070C05","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:25.543422Z","level":"INFO","message":"got service=property, port=8082","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":41,"span":{"id":"040402070C05","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"040402070C05","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:25.543470Z","level":"INFO","message":"got service_key=PROPERTY_ADDRESS","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":59,"span":{"id":"040402070C05","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"040402070C05","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:25.543504Z","level":"INFO","message":"got service=property, address=property_microservice","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":63,"span":{"id":"040402070C05","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"040402070C05","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:25.543534Z","level":"INFO","message":"requesting entity from: entity_address=http://entity_microservice:8081/entity/combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":105,"span":{"id":"040402070C05","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"040402070C05","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:25.543928Z","level":"INFO","message":"req: name=combo_test","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":36,"span":{"id":"040402070C05","name":"get_property"},"spans":[{"id":"040402070C05","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:25.543966Z","level":"INFO","message":"resp: value=origin=AU, colour=red","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":40,"span":{"id":"040402070C05","name":"get_property"},"spans":[{"id":"040402070C05","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:25.544292Z","level":"INFO","message":"entity_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"entity_microservice\")), port: Some(8081), path: \"/entity/combo_test\", query: None, fragment: None }, status: 200, headers: {\"content-type\": \"application/json\", \"content-length\": \"30\", \"date\": \"Thu, 07 Dec 2023 01:13:25 GMT\"} }","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":115}
+{"timestamp":"2023-12-07T01:13:25.544427Z","level":"INFO","message":"requesting property from: property_address=http://property_microservice:8082/property/combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":132}
+{"timestamp":"2023-12-07T01:13:25.544769Z","level":"INFO","message":"req: name=combo_test","target":"property_microservice::biz_router","filename":"property_microservice/biz_router.rs","line_number":34,"span":{"id":"040402070C05","name":"get_property"},"spans":[{"id":"040402070C05","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:25.544805Z","level":"INFO","message":"resp: value=property=Some Property, value=med","target":"property_microservice::biz_router","filename":"property_microservice/biz_router.rs","line_number":38,"span":{"id":"040402070C05","name":"get_property"},"spans":[{"id":"040402070C05","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:25.544951Z","level":"INFO","message":"property_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"property_microservice\")), port: Some(8082), path: \"/property/combo_test\", query: None, fragment: None }, status: 200, headers: {\"content-type\": \"application/json\", \"content-length\": \"42\", \"date\": \"Thu, 07 Dec 2023 01:13:25 GMT\"} }","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":150,"span":{"id":"040402070C05","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"040402070C05","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:29.482933Z","level":"INFO","message":"req: payload=PartialEntity { origin: Some(\"US\"), colour: Some(\"green\") }","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":80,"span":{"id":"000C0E0F0B04","name":"patch_property"},"spans":[{"id":"000C0E0F0B04","name":"patch_property"}]}
+{"timestamp":"2023-12-07T01:13:32.730463Z","level":"INFO","message":"req: name=combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":98,"span":{"id":"010703080403","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"010703080403","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:32.730626Z","level":"INFO","message":"got service_key=ENTITY_PORT","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":37,"span":{"id":"010703080403","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"010703080403","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:32.730686Z","level":"INFO","message":"got service=entity, port=8081","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":41,"span":{"id":"010703080403","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"010703080403","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:32.730774Z","level":"INFO","message":"got service_key=ENTITY_ADDRESS","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":59,"span":{"id":"010703080403","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"010703080403","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:32.730841Z","level":"INFO","message":"got service=entity, address=entity_microservice","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":63,"span":{"id":"010703080403","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"010703080403","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:32.730903Z","level":"INFO","message":"got service_key=PROPERTY_PORT","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":37,"span":{"id":"010703080403","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"010703080403","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:32.730957Z","level":"INFO","message":"got service=property, port=8082","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":41,"span":{"id":"010703080403","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"010703080403","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:32.731009Z","level":"INFO","message":"got service_key=PROPERTY_ADDRESS","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":59,"span":{"id":"010703080403","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"010703080403","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:32.731060Z","level":"INFO","message":"got service=property, address=property_microservice","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":63,"span":{"id":"010703080403","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"010703080403","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:32.731113Z","level":"INFO","message":"requesting entity from: entity_address=http://entity_microservice:8081/entity/combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":105,"span":{"id":"010703080403","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"010703080403","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:32.731687Z","level":"INFO","message":"req: name=combo_test","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":36,"span":{"id":"010703080403","name":"get_property"},"spans":[{"id":"010703080403","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:32.731741Z","level":"INFO","message":"resp: value=origin=US, colour=green","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":40,"span":{"id":"010703080403","name":"get_property"},"spans":[{"id":"010703080403","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:32.732103Z","level":"INFO","message":"entity_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"entity_microservice\")), port: Some(8081), path: \"/entity/combo_test\", query: None, fragment: None }, status: 200, headers: {\"content-type\": \"application/json\", \"content-length\": \"32\", \"date\": \"Thu, 07 Dec 2023 01:13:32 GMT\"} }","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":115,"span":{"id":"050408050607","name":"patch_property"},"spans":[{"id":"050408050607","name":"patch_property"}]}
+{"timestamp":"2023-12-07T01:13:32.732308Z","level":"INFO","message":"requesting property from: property_address=http://property_microservice:8082/property/combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":132,"span":{"id":"050408050607","name":"patch_property"},"spans":[{"id":"050408050607","name":"patch_property"}]}
+{"timestamp":"2023-12-07T01:13:32.732750Z","level":"INFO","message":"req: name=combo_test","target":"property_microservice::biz_router","filename":"property_microservice/biz_router.rs","line_number":34,"span":{"id":"010703080403","name":"get_property"},"spans":[{"id":"010703080403","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:32.732827Z","level":"INFO","message":"resp: value=property=Some Property, value=med","target":"property_microservice::biz_router","filename":"property_microservice/biz_router.rs","line_number":38,"span":{"id":"010703080403","name":"get_property"},"spans":[{"id":"010703080403","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:32.733050Z","level":"INFO","message":"property_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"property_microservice\")), port: Some(8082), path: \"/property/combo_test\", query: None, fragment: None }, status: 200, headers: {\"content-type\": \"application/json\", \"content-length\": \"42\", \"date\": \"Thu, 07 Dec 2023 01:13:32 GMT\"} }","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":150,"span":{"id":"010703080403","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"010703080403","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:41.278570Z","level":"INFO","message":"req: name=combo_test","target":"property_microservice::biz_router","filename":"property_microservice/biz_router.rs","line_number":99,"span":{"id":"0F070502010B","name":"delete_property"},"spans":[{"id":"0F070502010B","name":"delete_property"}]}
+{"timestamp":"2023-12-07T01:13:41.278635Z","level":"INFO","message":"Removed item: combo_test:property=Some Property, value=med","target":"shared::state","filename":"shared/state/mod.rs","line_number":61,"span":{"id":"0F070502010B","name":"delete_property"},"spans":[{"id":"0F070502010B","name":"delete_property"}]}
+{"timestamp":"2023-12-07T01:13:44.003333Z","level":"INFO","message":"req: name=combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":98,"span":{"id":"030D05000905","name":"get_property"},"spans":[{"id":"050408050607","name":"patch_property"},{"id":"030D05000905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:44.003409Z","level":"INFO","message":"got service_key=ENTITY_PORT","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":37,"span":{"id":"030D05000905","name":"get_property"},"spans":[{"id":"050408050607","name":"patch_property"},{"id":"030D05000905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:44.003447Z","level":"INFO","message":"got service=entity, port=8081","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":41,"span":{"id":"030D05000905","name":"get_property"},"spans":[{"id":"050408050607","name":"patch_property"},{"id":"030D05000905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:44.003476Z","level":"INFO","message":"got service_key=ENTITY_ADDRESS","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":59,"span":{"id":"030D05000905","name":"get_property"},"spans":[{"id":"050408050607","name":"patch_property"},{"id":"030D05000905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:44.003500Z","level":"INFO","message":"got service=entity, address=entity_microservice","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":63,"span":{"id":"030D05000905","name":"get_property"},"spans":[{"id":"050408050607","name":"patch_property"},{"id":"030D05000905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:44.003528Z","level":"INFO","message":"got service_key=PROPERTY_PORT","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":37,"span":{"id":"030D05000905","name":"get_property"},"spans":[{"id":"050408050607","name":"patch_property"},{"id":"030D05000905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:44.003553Z","level":"INFO","message":"got service=property, port=8082","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":41,"span":{"id":"030D05000905","name":"get_property"},"spans":[{"id":"050408050607","name":"patch_property"},{"id":"030D05000905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:44.003578Z","level":"INFO","message":"got service_key=PROPERTY_ADDRESS","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":59,"span":{"id":"030D05000905","name":"get_property"},"spans":[{"id":"050408050607","name":"patch_property"},{"id":"030D05000905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:44.003603Z","level":"INFO","message":"got service=property, address=property_microservice","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":63,"span":{"id":"030D05000905","name":"get_property"},"spans":[{"id":"050408050607","name":"patch_property"},{"id":"030D05000905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:44.003630Z","level":"INFO","message":"requesting entity from: entity_address=http://entity_microservice:8081/entity/combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":105,"span":{"id":"030D05000905","name":"get_property"},"spans":[{"id":"050408050607","name":"patch_property"},{"id":"030D05000905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:44.003975Z","level":"INFO","message":"req: name=combo_test","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":36,"span":{"id":"030D05000905","name":"get_property"},"spans":[{"id":"030D05000905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:44.004001Z","level":"INFO","message":"resp: value=origin=US, colour=green","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":40,"span":{"id":"030D05000905","name":"get_property"},"spans":[{"id":"030D05000905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:44.004142Z","level":"INFO","message":"entity_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"entity_microservice\")), port: Some(8081), path: \"/entity/combo_test\", query: None, fragment: None }, status: 200, headers: {\"content-type\": \"application/json\", \"content-length\": \"32\", \"date\": \"Thu, 07 Dec 2023 01:13:44 GMT\"} }","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":115,"span":{"id":"030D05000905","name":"get_property"},"spans":[{"id":"050408050607","name":"patch_property"},{"id":"030D05000905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:44.004228Z","level":"INFO","message":"requesting property from: property_address=http://property_microservice:8082/property/combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":132,"span":{"id":"030D05000905","name":"get_property"},"spans":[{"id":"050408050607","name":"patch_property"},{"id":"030D05000905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:44.004455Z","level":"INFO","message":"req: name=combo_test","target":"property_microservice::biz_router","filename":"property_microservice/biz_router.rs","line_number":34,"span":{"id":"030D05000905","name":"get_property"},"spans":[{"id":"030D05000905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:44.004479Z","level":"ERROR","message":"resp: status=404 Not Found","target":"property_microservice::biz_router","filename":"property_microservice/biz_router.rs","line_number":42,"span":{"id":"030D05000905","name":"get_property"},"spans":[{"id":"030D05000905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:44.004588Z","level":"INFO","message":"property_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"property_microservice\")), port: Some(8082), path: \"/property/combo_test\", query: None, fragment: None }, status: 404, headers: {\"content-length\": \"0\", \"date\": \"Thu, 07 Dec 2023 01:13:44 GMT\"} }","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":150,"span":{"id":"030705040806","name":"post_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"}]}
+{"timestamp":"2023-12-07T01:13:48.987107Z","level":"INFO","message":"req: payload=Property { property: \"Some Property\", value: \"high\" }","target":"property_microservice::biz_router","filename":"property_microservice/biz_router.rs","line_number":58,"span":{"id":"050C0305030F","name":"post_property"},"spans":[{"id":"050C0305030F","name":"post_property"}]}
+{"timestamp":"2023-12-07T01:13:51.945252Z","level":"INFO","message":"req: name=combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":98,"span":{"id":"08090D040909","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"08090D040909","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:51.945379Z","level":"INFO","message":"got service_key=ENTITY_PORT","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":37,"span":{"id":"08090D040909","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"08090D040909","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:51.945405Z","level":"INFO","message":"got service=entity, port=8081","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":41,"span":{"id":"08090D040909","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"08090D040909","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:51.945431Z","level":"INFO","message":"got service_key=ENTITY_ADDRESS","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":59,"span":{"id":"08090D040909","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"08090D040909","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:51.945453Z","level":"INFO","message":"got service=entity, address=entity_microservice","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":63,"span":{"id":"08090D040909","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"08090D040909","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:51.945478Z","level":"INFO","message":"got service_key=PROPERTY_PORT","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":37,"span":{"id":"08090D040909","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"08090D040909","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:51.945518Z","level":"INFO","message":"got service=property, port=8082","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":41,"span":{"id":"08090D040909","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"08090D040909","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:51.945539Z","level":"INFO","message":"got service_key=PROPERTY_ADDRESS","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":59,"span":{"id":"08090D040909","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"08090D040909","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:51.945560Z","level":"INFO","message":"got service=property, address=property_microservice","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":63,"span":{"id":"08090D040909","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"08090D040909","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:51.945582Z","level":"INFO","message":"requesting entity from: entity_address=http://entity_microservice:8081/entity/combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":105,"span":{"id":"08090D040909","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"08090D040909","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:51.946062Z","level":"INFO","message":"req: name=combo_test","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":36,"span":{"id":"08090D040909","name":"get_property"},"spans":[{"id":"08090D040909","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:51.946096Z","level":"INFO","message":"resp: value=origin=US, colour=green","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":40,"span":{"id":"08090D040909","name":"get_property"},"spans":[{"id":"08090D040909","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:51.946304Z","level":"INFO","message":"entity_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"entity_microservice\")), port: Some(8081), path: \"/entity/combo_test\", query: None, fragment: None }, status: 200, headers: {\"content-type\": \"application/json\", \"content-length\": \"32\", \"date\": \"Thu, 07 Dec 2023 01:13:51 GMT\"} }","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":115,"span":{"id":"030D05000905","name":"get_property"},"spans":[{"id":"050408050607","name":"patch_property"},{"id":"030D05000905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:51.946416Z","level":"INFO","message":"requesting property from: property_address=http://property_microservice:8082/property/combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":132,"span":{"id":"030D05000905","name":"get_property"},"spans":[{"id":"050408050607","name":"patch_property"},{"id":"030D05000905","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:51.946705Z","level":"INFO","message":"req: name=combo_test","target":"property_microservice::biz_router","filename":"property_microservice/biz_router.rs","line_number":34,"span":{"id":"08090D040909","name":"get_property"},"spans":[{"id":"08090D040909","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:51.946748Z","level":"INFO","message":"resp: value=property=Some Property, value=high","target":"property_microservice::biz_router","filename":"property_microservice/biz_router.rs","line_number":38,"span":{"id":"08090D040909","name":"get_property"},"spans":[{"id":"08090D040909","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:51.946912Z","level":"INFO","message":"property_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"property_microservice\")), port: Some(8082), path: \"/property/combo_test\", query: None, fragment: None }, status: 200, headers: {\"content-type\": \"application/json\", \"content-length\": \"43\", \"date\": \"Thu, 07 Dec 2023 01:13:51 GMT\"} }","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":150,"span":{"id":"08090D040909","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"08090D040909","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:55.057588Z","level":"INFO","message":"req: name=combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":428,"span":{"id":"0E020303070A","name":"delete_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0E020303070A","name":"delete_property"}]}
+{"timestamp":"2023-12-07T01:13:55.057692Z","level":"INFO","message":"got service_key=ENTITY_PORT","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":37,"span":{"id":"0E020303070A","name":"delete_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0E020303070A","name":"delete_property"}]}
+{"timestamp":"2023-12-07T01:13:55.057719Z","level":"INFO","message":"got service=entity, port=8081","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":41,"span":{"id":"0E020303070A","name":"delete_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0E020303070A","name":"delete_property"}]}
+{"timestamp":"2023-12-07T01:13:55.057743Z","level":"INFO","message":"got service_key=ENTITY_ADDRESS","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":59,"span":{"id":"0E020303070A","name":"delete_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0E020303070A","name":"delete_property"}]}
+{"timestamp":"2023-12-07T01:13:55.057767Z","level":"INFO","message":"got service=entity, address=entity_microservice","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":63,"span":{"id":"0E020303070A","name":"delete_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0E020303070A","name":"delete_property"}]}
+{"timestamp":"2023-12-07T01:13:55.057792Z","level":"INFO","message":"got service_key=PROPERTY_PORT","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":37,"span":{"id":"0E020303070A","name":"delete_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0E020303070A","name":"delete_property"}]}
+{"timestamp":"2023-12-07T01:13:55.057823Z","level":"INFO","message":"got service=property, port=8082","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":41,"span":{"id":"0E020303070A","name":"delete_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0E020303070A","name":"delete_property"}]}
+{"timestamp":"2023-12-07T01:13:55.057845Z","level":"INFO","message":"got service_key=PROPERTY_ADDRESS","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":59,"span":{"id":"0E020303070A","name":"delete_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0E020303070A","name":"delete_property"}]}
+{"timestamp":"2023-12-07T01:13:55.057866Z","level":"INFO","message":"got service=property, address=property_microservice","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":63,"span":{"id":"0E020303070A","name":"delete_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0E020303070A","name":"delete_property"}]}
+{"timestamp":"2023-12-07T01:13:55.057902Z","level":"INFO","message":"deleting entity from: entity_address=http://entity_microservice:8081/entity/combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":435,"span":{"id":"0E020303070A","name":"delete_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0E020303070A","name":"delete_property"}]}
+{"timestamp":"2023-12-07T01:13:55.058791Z","level":"INFO","message":"req: name=combo_test","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":105,"span":{"id":"0E020303070A","name":"delete_property"},"spans":[{"id":"0E020303070A","name":"delete_property"}]}
+{"timestamp":"2023-12-07T01:13:55.058893Z","level":"INFO","message":"Removed item: combo_test:origin=US, colour=green","target":"shared::state","filename":"shared/state/mod.rs","line_number":61,"span":{"id":"0E020303070A","name":"delete_property"},"spans":[{"id":"0E020303070A","name":"delete_property"}]}
+{"timestamp":"2023-12-07T01:13:55.059084Z","level":"INFO","message":"response for entity deletion: response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"entity_microservice\")), port: Some(8081), path: \"/entity/combo_test\", query: None, fragment: None }, status: 204, headers: {\"date\": \"Thu, 07 Dec 2023 01:13:55 GMT\"} }","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":450,"span":{"id":"0E020303070A","name":"delete_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0E020303070A","name":"delete_property"}]}
+{"timestamp":"2023-12-07T01:13:55.059155Z","level":"INFO","message":"deleting property from: property_address=http://property_microservice:8082/property/combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":455,"span":{"id":"0E020303070A","name":"delete_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0E020303070A","name":"delete_property"}]}
+{"timestamp":"2023-12-07T01:13:55.059394Z","level":"INFO","message":"req: name=combo_test","target":"property_microservice::biz_router","filename":"property_microservice/biz_router.rs","line_number":99,"span":{"id":"0E020303070A","name":"delete_property"},"spans":[{"id":"0E020303070A","name":"delete_property"}]}
+{"timestamp":"2023-12-07T01:13:55.059420Z","level":"INFO","message":"Removed item: combo_test:property=Some Property, value=high","target":"shared::state","filename":"shared/state/mod.rs","line_number":61,"span":{"id":"0E020303070A","name":"delete_property"},"spans":[{"id":"0E020303070A","name":"delete_property"}]}
+{"timestamp":"2023-12-07T01:13:55.059525Z","level":"INFO","message":"response for property deletion: response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"property_microservice\")), port: Some(8082), path: \"/property/combo_test\", query: None, fragment: None }, status: 204, headers: {\"date\": \"Thu, 07 Dec 2023 01:13:55 GMT\"} }","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":473,"span":{"id":"0E020303070A","name":"delete_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0E020303070A","name":"delete_property"}]}
+{"timestamp":"2023-12-07T01:13:57.600548Z","level":"INFO","message":"req: name=combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":98,"span":{"id":"0A04080C0F04","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0A04080C0F04","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:57.600632Z","level":"INFO","message":"got service_key=ENTITY_PORT","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":37,"span":{"id":"0A04080C0F04","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0A04080C0F04","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:57.600658Z","level":"INFO","message":"got service=entity, port=8081","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":41,"span":{"id":"0A04080C0F04","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0A04080C0F04","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:57.600682Z","level":"INFO","message":"got service_key=ENTITY_ADDRESS","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":59,"span":{"id":"0A04080C0F04","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0A04080C0F04","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:57.600703Z","level":"INFO","message":"got service=entity, address=entity_microservice","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":63,"span":{"id":"0A04080C0F04","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0A04080C0F04","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:57.600727Z","level":"INFO","message":"got service_key=PROPERTY_PORT","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":37,"span":{"id":"0A04080C0F04","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0A04080C0F04","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:57.600747Z","level":"INFO","message":"got service=property, port=8082","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":41,"span":{"id":"0A04080C0F04","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0A04080C0F04","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:57.600787Z","level":"INFO","message":"got service_key=PROPERTY_ADDRESS","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":59,"span":{"id":"0A04080C0F04","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0A04080C0F04","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:57.600815Z","level":"INFO","message":"got service=property, address=property_microservice","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":63,"span":{"id":"0A04080C0F04","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0A04080C0F04","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:57.600837Z","level":"INFO","message":"requesting entity from: entity_address=http://entity_microservice:8081/entity/combo_test","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":105,"span":{"id":"0A04080C0F04","name":"get_property"},"spans":[{"id":"050D0607080B","name":"get_property"},{"id":"030705040806","name":"post_property"},{"id":"0A04080C0F04","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:57.601142Z","level":"INFO","message":"req: name=combo_test","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":36,"span":{"id":"0A04080C0F04","name":"get_property"},"spans":[{"id":"0A04080C0F04","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:57.601165Z","level":"ERROR","message":"resp: status=404 Not Found","target":"entity_microservice::biz_router","filename":"entity_microservice/biz_router.rs","line_number":44,"span":{"id":"0A04080C0F04","name":"get_property"},"spans":[{"id":"0A04080C0F04","name":"get_property"}]}
+{"timestamp":"2023-12-07T01:13:57.601314Z","level":"INFO","message":"entity_response=Response { url: Url { scheme: \"http\", cannot_be_a_base: false, username: \"\", password: None, host: Some(Domain(\"entity_microservice\")), port: Some(8081), path: \"/entity/combo_test\", query: None, fragment: None }, status: 404, headers: {\"content-length\": \"0\", \"date\": \"Thu, 07 Dec 2023 01:13:57 GMT\"} }","target":"combo_service::biz_router","filename":"combo_service/biz_router.rs","line_number":115,"span":{"id":"030D05000905","name":"get_property"},"spans":[{"id":"050408050607","name":"patch_property"},{"id":"030D05000905","name":"get_property"}]}

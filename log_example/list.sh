@@ -1,5 +1,3 @@
 #!/bin/sh
 
-query=".[].span.id"
-
-cat log.json | jq -c "[.[] | select(.span != null)]" | jq -c ".[].span.id" | jq -r | sort | uniq
+cat log.json | rg -o '"id":"[0-9A-F]+"' | rg -o '[0-9A-F]+' | sort | uniq
