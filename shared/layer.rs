@@ -40,9 +40,5 @@ fn trace_layer_inner(request: &Request) -> Span {
 
 
 pub fn generate_trace_id_for_layer<T>(_: &T) -> Option<HeaderValue> {
-    let id = generate_trace_id().parse().ok();
-
-    println!("{id:?}");
-
-    id
+    generate_trace_id().parse().ok()
 }
