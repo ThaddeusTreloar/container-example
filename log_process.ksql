@@ -1,0 +1,34 @@
+CREATE STREAM log_sink (
+    timestamp VARCHAR,
+    level VARCHAR,
+    message VARCHAR,
+    target VARCHAR,
+    filename VARCHAR,
+    line_number INT,
+    span STRUCT<
+        caller VARCHAR,
+        logid VARCHAR,
+        method VARCHAR,
+        uri VARCHAR,
+        name VARCHAR
+    >
+) WITH (
+    kafka_topic = 'log_sink',
+    partitions = 1,
+    value_format = 'JSON'
+);
+
+CREATE STREAM trace_logs_unpart AS SELECT
+    span->logid,
+    timestamp,
+    level,
+    message,
+    target,
+    filename,
+    line_number,
+    span->caller,
+    span->method,
+    span->uri,
+    span->name
+FROM log_sink
+EMIT CHANGES;

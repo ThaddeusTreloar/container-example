@@ -1,0 +1,15 @@
+{
+    "timestamp": "2023-12-07T11:41:06.495567Z",
+    "level": "INFO",
+    "message": "Rewriting uri",
+    "target": "proxy_handler::handlers",
+    "filename": "proxy_handler/handlers.rs",
+    "line_number": 167,
+    "span": {
+        "caller": "unknown",
+        "logid": "010E09010C05",
+        "method": "PATCH",
+        "uri": "/combo/proxy_test",
+        "name": "request"
+    }
+}
