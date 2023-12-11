@@ -33,8 +33,8 @@ async fn main() -> Result<(), anyhow::Error> {
     let raw_env_vars: HashMap<String, String> = std::env::vars().collect();
 
     let sink_topic = match raw_env_vars.get("KAFKA_TOPIC") {
-        Some(topic) => topic,
-        None => "log_sink",
+        Some(topic) => topic.clone(),
+        None => String::from("log_sink"),
     };
 
     let mut stdin = BufReader::new(stdin()).lines();
@@ -53,13 +53,15 @@ async fn main() -> Result<(), anyhow::Error> {
     println!("Listening for lines from stdin...");
 
     while let Some(line) = stdin.next_line().await? {
-        println!("Sending line: {line}");
+        //println!("Sending line: {line}");
+        let sink_ref = sink.clone();
+        let sink_topic = sink_topic.clone();
 
-        if let Err(e) = handle_line(&line, sink_topic, sink.clone()).await {
-            println!("Unable to send {e}")
-        }
-
-        println!("Sent line: {line}");
+        tokio::spawn(async move {
+            if let Err(e) = handle_line(&line, &sink_topic, sink_ref).await {
+                println!("Unable to send {e}")
+            }
+        });
     }
 
     Ok(())

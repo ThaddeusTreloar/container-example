@@ -56,6 +56,7 @@ where T: Clone + Display
 
     pub async fn rm(&self, key: &str) -> Option<T> {
         let mut state = self.state.lock().await;
+        
         match state.remove(key) {
             Some(value) => {
                 info!("Removed item: {key}:{value}");
